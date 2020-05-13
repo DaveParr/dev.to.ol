@@ -1,8 +1,8 @@
 #' @title get my articles
 #' @description Provides lots of info on your users articles
-#' @param api_key the api you have set up
+#' @param key the api you have set up on DEV.TO
 #' @return article stuff
-#' @details DETAILS
+#' @details if no key is supplied, will check for key named DEVTO in `.Renviron`
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -15,7 +15,13 @@
 #' @export
 #' @importFrom httr content GET add_headers
 
-get_me <- function(api_key) {
+get_me <- function(key = NA) {
   httr::content(httr::GET(url = "https://dev.to/api/articles/me",
-                          httr::add_headers("api-key" = api_key)))
+                          httr::add_headers("api-key" =
+                                              if (!is.na(key)) {
+                                                key
+                                              } else {
+                                                message("Using DEVTO in .Reinviron")
+                                                Sys.getenv(x = "DEVTO")
+                                              })))
 }

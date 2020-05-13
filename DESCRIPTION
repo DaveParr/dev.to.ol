@@ -5,6 +5,7 @@ Authors@R: person('David', 'Parr', email = 'DavidRGParr@gmail.com', role = c('cr
 Description: For working with the dev.to api and related markdown files
 License: MIT + file LICENSE
 LazyData: true
-URL: https://github.com/DaveParr/dev.to.ol.git
+URL: https://github.com/DaveParr/dev.to.ol
 BugReports: http://that
 Encoding: UTF-8
+RoxygenNote: 6.1.1
