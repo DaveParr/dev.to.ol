@@ -21,7 +21,7 @@ get_users_articles <- function(key = NA) {
                                               if (!is.na(key)) {
                                                 key
                                               } else {
-                                                message("Using DEVTO in .Reinviron")
+                                                message("Using DEVTO in .Renviron")
                                                 Sys.getenv(x = "DEVTO")
                                               })))
 }
