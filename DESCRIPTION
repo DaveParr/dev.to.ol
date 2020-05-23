@@ -9,3 +9,6 @@ URL: https://github.com/DaveParr/dev.to.ol
 BugReports: http://that
 Encoding: UTF-8
 RoxygenNote: 6.1.1
+Imports: 
+    rmarkdown,
+    assertthat

@@ -4,18 +4,18 @@
 \alias{post_new_article}
 \title{Post a markdown file to dev.to}
 \usage{
-post_new_article(key = NA, title, file)
+post_new_article(file, key = NA)
 }
 \arguments{
-\item{key}{Your API key, Default: NA}
-
 \item{file}{The path to the file, Default: file}
+
+\item{key}{Your API key, Default: NA}
 }
 \value{
 The response
 }
 \description{
-Create a new post well rendered markdown file generated from an .Rmd with a `github_document` output.
+Create a new post from an .Rmd
 }
 \details{
 Will look for an api key in the `.REnviron` file. Seems to check if the body is identical to a previous article and error if so with `"Body markdown has already been taken"`.
@@ -29,5 +29,5 @@ if(interactive()){
 }
 \seealso{
 \code{\link[httr]{POST}},\code{\link[httr]{add_headers}},\code{\link[httr]{verbose}},\code{\link[httr]{content}}
- \code{\link[readr]{read_file}}, \code{\link[dev.to.ol]{api_key}}
+ \code{\link[readr]{read_file}}, \code{\link[dev.to.ol]{api_key}}, \code{\link[dev.to.ol]{is_postable_article}}
 }
