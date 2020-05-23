@@ -4,7 +4,7 @@
 \alias{post_new_article}
 \title{Post a markdown file to dev.to}
 \usage{
-post_new_article(key = NA, file = file)
+post_new_article(key = NA, title, file)
 }
 \arguments{
 \item{key}{Your API key, Default: NA}
@@ -29,5 +29,5 @@ if(interactive()){
 }
 \seealso{
 \code{\link[httr]{POST}},\code{\link[httr]{add_headers}},\code{\link[httr]{verbose}},\code{\link[httr]{content}}
- \code{\link[readr]{read_file}}
+ \code{\link[readr]{read_file}}, \code{\link[dev.to.ol]{api_key}}
 }

@@ -2,12 +2,12 @@
 % Please edit documentation in R/get_users_articles.R
 \name{get_users_articles}
 \alias{get_users_articles}
-\title{get the authenticated users articles}
+\title{Get the authenticated users articles}
 \usage{
 get_users_articles(key = NA)
 }
 \arguments{
-\item{key}{the api you have set up on DEV.TO}
+\item{key}{the api you have set up on DEV.TO, Default: NA}
 }
 \value{
 article stuff
@@ -26,5 +26,6 @@ if(interactive()){
 }
 }
 \seealso{
-\code{\link[httr]{content}},\code{\link[httr]{GET}},\code{\link[httr]{add_headers}}
+\code{\link[httr]{content}},\code{\link[httr]{GET}},\code{\link[httr]{add_headers}},
+ \code{\link[dev.to.ol]{api_key}}
 }
