@@ -7,7 +7,7 @@
 #' @examples
 #' \dontrun{
 #' if(interactive()){
-#'  post_new_article("./articles/my_article.md")
+#'  post_new_article("./articles/my_article.Rmd")
 #'  }
 #' }
 #' @seealso

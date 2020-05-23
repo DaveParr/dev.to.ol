@@ -23,7 +23,7 @@ Will look for an api key in the `.REnviron` file. Seems to check if the body is 
 \examples{
 \dontrun{
 if(interactive()){
- post_new_article("./articles/my_article.md")
+ post_new_article("./articles/my_article.Rmd")
  }
 }
 }

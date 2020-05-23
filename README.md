@@ -29,7 +29,7 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(dev.to.ol)
 
-post_new_article("./articles/my_article.md")
+post_new_article("./articles/my_article.Rmd")
 ```
 
 ## Authentication
