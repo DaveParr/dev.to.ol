@@ -15,7 +15,7 @@ post_new_article(key = NA, title, file)
 The response
 }
 \description{
-Create a new post well rendered markdown file
+Create a new post well rendered markdown file generated from an .Rmd with a `github_document` output.
 }
 \details{
 Will look for an api key in the `.REnviron` file. Seems to check if the body is identical to a previous article and error if so with `"Body markdown has already been taken"`.

@@ -1,5 +1,5 @@
 #' @title Post a markdown file to dev.to
-#' @description Create a new post well rendered markdown file
+#' @description Create a new post well rendered markdown file generated from an .Rmd with a `github_document` output.
 #' @param key Your API key, Default: NA
 #' @param file The path to the file, Default: file
 #' @return The response
