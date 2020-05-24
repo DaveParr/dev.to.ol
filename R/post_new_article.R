@@ -1,6 +1,6 @@
 #' @title Post a markdown file to dev.to
 #' @description Create a new post from an .Rmd
-#' @param file The path to the file, Default: file
+#' @param file The path to the file
 #' @param tags List of tags, Default: NA
 #' @param series Character string of the series name, Default: NA
 #' @param key Your API key, Default: NA
