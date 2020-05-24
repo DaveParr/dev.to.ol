@@ -4,7 +4,8 @@
 \alias{post_new_article}
 \title{Post a markdown file to dev.to}
 \usage{
-post_new_article(file, series = NA, tags = NA, key = NA)
+post_new_article(file, series = NA, tags = NA, published = FALSE,
+  key = NA)
 }
 \arguments{
 \item{file}{The path to the file}
@@ -12,6 +13,8 @@ post_new_article(file, series = NA, tags = NA, key = NA)
 \item{series}{Character string of the series name, Default: NA}
 
 \item{tags}{List of tags, Default: NA}
+
+\item{published}{Booleen to represent if the article is published, or should be left as draft, Default: FALSE}
 
 \item{key}{Your API key, Default: NA}
 }

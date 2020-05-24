@@ -3,6 +3,7 @@
 #' @param file The path to the file
 #' @param tags List of tags, Default: NA
 #' @param series Character string of the series name, Default: NA
+#' @param published Booleen to represent if the article is published, or should be left as draft, Default: FALSE
 #' @param key Your API key, Default: NA
 #' @return The response
 #' @details Will look for an api key in the `.REnviron` file. Seems to check if the body is identical to a previous article and error if so with `"Body markdown has already been taken"`.
@@ -20,33 +21,39 @@
 #' @importFrom httr POST add_headers verbose content
 #' @importFrom readr read_file
 
-post_new_article <- function(file, series = NA, tags = NA, key = NA) {
+post_new_article <-
+  function(file,
+           series = NA,
+           tags = NA,
+           published = FALSE,
+           key = NA) {
+    check_file <- is_postable_Rmd(file)
 
-  check_file <- is_postable_Rmd(file)
+    if (check_file) {
+      file_frontmatter <- rmarkdown::yaml_front_matter(file)
 
-  if (check_file) {
-    file_frontmatter <- rmarkdown::yaml_front_matter(file)
+      output_path <- rmarkdown::render('./data/test.Rmd',
+                                       output_format = 'github_document',
+                                       output_dir = getwd())
 
-    output_path <- rmarkdown::render('./data/test.Rmd',
-                                     output_format = 'github_document',
-                                     output_dir = getwd())
+      file_string <- readr::read_file(output_path)
 
-
-    file_string <- readr::read_file(output_path)
-
-    response <- httr::POST(
-      url = "https://dev.to/api/articles",
-      httr::add_headers("api-key" = api_key(key = key)),
-      body = list(article = list(
-        title = file_frontmatter$title,
-        series = series,
-        tags = tags,
-        body_markdown = file_string
-      )),
-      encode = 'json'
-    )
-    httr::content(response)
-  } else {
-    message(attr(check_file, "msg"))
+      response <- httr::POST(
+        url = "https://dev.to/api/articles",
+        httr::add_headers("api-key" = api_key(key = key)),
+        body = list(
+          article = list(
+            title = file_frontmatter$title,
+            series = series,
+            published = published,
+            tags = tags,
+            body_markdown = file_string
+          )
+        ),
+        encode = 'json'
+      )
+      httr::content(response)
+    } else {
+      message(attr(check_file, "msg"))
+    }
   }
-}
