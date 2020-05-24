@@ -1,12 +1,20 @@
 #' @title Post a markdown file to dev.to
-#' @description Create a new post from an .Rmd
+#' @description Create a new post from an .Rmd.
 #' @param file The path to the file
-#' @param tags List of tags, Default: NA
-#' @param series Character string of the series name, Default: NA
-#' @param published Booleen to represent if the article is published, or should be left as draft, Default: FALSE
 #' @param key Your API key, Default: NA
 #' @return The response
 #' @details Will look for an api key in the `.REnviron` file. Seems to check if the body is identical to a previous article and error if so with `"Body markdown has already been taken"`.
+#' The following YAML arguments are read from the file YAML frontmatter if present:
+#' \describe{
+#'   \item{title}{A character string}
+#'   \item{series}{A character string}
+#'   \item{published}{A boolean}
+#'   \item{tags}{list of character strings: \code{["tag1", "tag2"]}}
+#' }
+#'
+#' The default table output method renders a very large print code block.
+#' The workaround is to use  \code{\link[knitr]{kable}}.
+#'
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -23,9 +31,6 @@
 
 post_new_article <-
   function(file,
-           series = NA,
-           tags = NA,
-           published = FALSE,
            key = NA) {
     check_file <- is_postable_Rmd(file)
 
@@ -36,7 +41,9 @@ post_new_article <-
                                        output_format = 'github_document',
                                        output_dir = getwd())
 
-      file_string <- readr::read_file(output_path)
+      file_string <- readr::read_file(output_path) %>%
+        stringr::str_remove(glue::glue("{title}\n================\n\n\n",
+                                       title = file_frontmatter$title))
 
       response <- httr::POST(
         url = "https://dev.to/api/articles",
@@ -44,9 +51,9 @@ post_new_article <-
         body = list(
           article = list(
             title = file_frontmatter$title,
-            series = series,
-            published = published,
-            tags = tags,
+            series = file_frontmatter$series,
+            published = file_frontmatter$published,
+            tags = file_frontmatter$tags,
             body_markdown = file_string
           )
         ),

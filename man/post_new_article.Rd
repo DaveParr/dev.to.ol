@@ -4,17 +4,10 @@
 \alias{post_new_article}
 \title{Post a markdown file to dev.to}
 \usage{
-post_new_article(file, series = NA, tags = NA, published = FALSE,
-  key = NA)
+post_new_article(file, key = NA)
 }
 \arguments{
 \item{file}{The path to the file}
-
-\item{series}{Character string of the series name, Default: NA}
-
-\item{tags}{List of tags, Default: NA}
-
-\item{published}{Booleen to represent if the article is published, or should be left as draft, Default: FALSE}
 
 \item{key}{Your API key, Default: NA}
 }
@@ -22,10 +15,20 @@ post_new_article(file, series = NA, tags = NA, published = FALSE,
 The response
 }
 \description{
-Create a new post from an .Rmd
+Create a new post from an .Rmd.
 }
 \details{
 Will look for an api key in the `.REnviron` file. Seems to check if the body is identical to a previous article and error if so with `"Body markdown has already been taken"`.
+The following YAML arguments are read from the file YAML frontmatter if present:
+\describe{
+  \item{title}{A character string}
+  \item{series}{A character string}
+  \item{published}{A boolean}
+  \item{tags}{list of character strings: \code{["tag1", "tag2"]}}
+}
+
+The default table output method renders a very large print code block.
+The workaround is to use  \code{\link[knitr]{kable}}.
 }
 \examples{
 \dontrun{
