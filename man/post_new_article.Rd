@@ -4,10 +4,14 @@
 \alias{post_new_article}
 \title{Post a markdown file to dev.to}
 \usage{
-post_new_article(file, key = NA)
+post_new_article(file, series = NA, tags = NA, key = NA)
 }
 \arguments{
 \item{file}{The path to the file, Default: file}
+
+\item{series}{Character string of the series name, Default: NA}
+
+\item{tags}{List of tags, Default: NA}
 
 \item{key}{Your API key, Default: NA}
 }
@@ -23,7 +27,7 @@ Will look for an api key in the `.REnviron` file. Seems to check if the body is 
 \examples{
 \dontrun{
 if(interactive()){
- post_new_article("./articles/my_article.Rmd")
+ post_new_article("./articles/my_article.Rmd", tags = list('montag', 'dienstag'))
  }
 }
 }

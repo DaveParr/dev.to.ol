@@ -1,13 +1,15 @@
 #' @title Post a markdown file to dev.to
 #' @description Create a new post from an .Rmd
-#' @param key Your API key, Default: NA
 #' @param file The path to the file, Default: file
+#' @param tags List of tags, Default: NA
+#' @param series Character string of the series name, Default: NA
+#' @param key Your API key, Default: NA
 #' @return The response
 #' @details Will look for an api key in the `.REnviron` file. Seems to check if the body is identical to a previous article and error if so with `"Body markdown has already been taken"`.
 #' @examples
 #' \dontrun{
 #' if(interactive()){
-#'  post_new_article("./articles/my_article.Rmd")
+#'  post_new_article("./articles/my_article.Rmd", tags = list('montag', 'dienstag'))
 #'  }
 #' }
 #' @seealso
@@ -18,7 +20,7 @@
 #' @importFrom httr POST add_headers verbose content
 #' @importFrom readr read_file
 
-post_new_article <- function(file, key = NA) {
+post_new_article <- function(file, series = NA, tags = NA, key = NA) {
 
   check_file <- is_postable_Rmd(file)
 
@@ -37,6 +39,8 @@ post_new_article <- function(file, key = NA) {
       httr::add_headers("api-key" = api_key(key = key)),
       body = list(article = list(
         title = file_frontmatter$title,
+        series = series,
+        tags = tags,
         body_markdown = file_string
       )),
       encode = 'json'
