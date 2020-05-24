@@ -7,7 +7,7 @@
 post_new_article(file, series = NA, tags = NA, key = NA)
 }
 \arguments{
-\item{file}{The path to the file, Default: file}
+\item{file}{The path to the file}
 
 \item{series}{Character string of the series name, Default: NA}
 
