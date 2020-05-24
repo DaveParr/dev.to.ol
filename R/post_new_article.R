@@ -18,16 +18,22 @@
 #' @examples
 #' \dontrun{
 #' if(interactive()){
-#'  post_new_article("./articles/my_article.Rmd", tags = list('montag', 'dienstag'))
+#'  post_new_article("./articles/my_article.Rmd")
 #'  }
 #' }
 #' @seealso
-#'  \code{\link[httr]{POST}},\code{\link[httr]{add_headers}},\code{\link[httr]{verbose}},\code{\link[httr]{content}}
-#'  \code{\link[readr]{read_file}}, \code{\link[dev.to.ol]{api_key}}, \code{\link[dev.to.ol]{is_postable_article}}
+#'  \code{\link[rmarkdown]{yaml_front_matter}},\code{\link[rmarkdown]{render}}
+#'  \code{\link[readr]{read_file}}
+#'  \code{\link[stringr]{str_remove}}
+#'  \code{\link[glue]{glue}}
+#'  \code{\link[httr]{POST}},\code{\link[httr]{add_headers}},\code{\link[httr]{content}}
 #' @rdname post_new_article
 #' @export
-#' @importFrom httr POST add_headers verbose content
+#' @importFrom rmarkdown yaml_front_matter render
 #' @importFrom readr read_file
+#' @importFrom stringr str_remove
+#' @importFrom glue glue
+#' @importFrom httr POST add_headers content
 
 post_new_article <-
   function(file,
@@ -37,7 +43,7 @@ post_new_article <-
     if (check_file) {
       file_frontmatter <- rmarkdown::yaml_front_matter(file)
 
-      output_path <- rmarkdown::render('./data/test.Rmd',
+      output_path <- rmarkdown::render(file,
                                        output_format = 'github_document',
                                        output_dir = getwd())
 

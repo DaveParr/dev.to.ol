@@ -33,11 +33,14 @@ The workaround is to use  \code{\link[knitr]{kable}}.
 \examples{
 \dontrun{
 if(interactive()){
- post_new_article("./articles/my_article.Rmd", tags = list('montag', 'dienstag'))
+ post_new_article("./articles/my_article.Rmd")
  }
 }
 }
 \seealso{
-\code{\link[httr]{POST}},\code{\link[httr]{add_headers}},\code{\link[httr]{verbose}},\code{\link[httr]{content}}
- \code{\link[readr]{read_file}}, \code{\link[dev.to.ol]{api_key}}, \code{\link[dev.to.ol]{is_postable_article}}
+\code{\link[rmarkdown]{yaml_front_matter}},\code{\link[rmarkdown]{render}}
+ \code{\link[readr]{read_file}}
+ \code{\link[stringr]{str_remove}}
+ \code{\link[glue]{glue}}
+ \code{\link[httr]{POST}},\code{\link[httr]{add_headers}},\code{\link[httr]{content}}
 }
