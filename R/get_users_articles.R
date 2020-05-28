@@ -16,8 +16,8 @@
 #' @export
 #' @importFrom httr content GET add_headers
 get_users_articles <- function(key = NA) {
-  httr::content(httr::GET(
+  httr::GET(
     url = "https://dev.to/api/articles/me",
     httr::add_headers("api-key" = api_key(key = key))
-  ))
+  )
 }
