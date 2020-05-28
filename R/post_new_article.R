@@ -65,7 +65,7 @@ post_new_article <-
         ),
         encode = 'json'
       )
-      httr::content(response)
+      response
     } else {
       message(attr(check_file, "msg"))
     }

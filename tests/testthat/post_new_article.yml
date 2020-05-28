@@ -1,0 +1,116 @@
+http_interactions:
+- request:
+    method: post
+    uri: https://dev.to/api/articles
+    body:
+      encoding: ''
+      string: '{"article":{"title":"test no things","series":{},"published":{},"tags":{},"body_markdown":"##
+        R Markdown\n\nThis is an R Markdown document. Markdown is a simple formatting
+        syntax\nfor authoring HTML, PDF, and MS Word documents. For more details on\nusing
+        R Markdown see <http://rmarkdown.rstudio.com>.\n\nWhen you click the **Knit**
+        button a document will be generated that\nincludes both content as well as
+        the output of any embedded R code\nchunks within the document. You can embed
+        an R code chunk like this:\n\n``` r\nmtcars %>%\n  group_by(cyl) %>%\n  summarise(mean
+        = mean(disp), n = n()) %>% \n  knitr::kable()\n```\n\n| cyl |     mean |  n
+        |\n| --: | -------: | -: |\n|   4 | 105.1364 | 11 |\n|   6 | 183.3143 |  7
+        |\n|   8 | 353.1000 | 14 |\n\n## Including Plots\n\nYou can also embed plots,
+        for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/test_files/figure-gfm/pressure-1.png)<!--
+        -->\n\nNote that the `echo = FALSE` parameter was added to the code chunk
+        to\nprevent printing of the R code that generated the plot.\n"}}'
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      Content-Type: application/json
+      api-key: hapxsfbB4PPSDHkLkQiA4VHN
+  response:
+    status:
+      status_code: 201
+      category: Success
+      reason: Created
+      message: 'Success: (201) Created'
+    headers:
+      accept-ranges:
+      - bytes
+      - bytes
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      content-type: application/json; charset=utf-8
+      date: Thu, 28 May 2020 12:28:33 GMT
+      etag: W/"9675aa5e83ce889e69765c624ab4c293"
+      location: https://dev.to/daveparr/test-no-things-28dl-temp-slug-626472
+      referrer-policy: strict-origin-when-cross-origin
+      server: Cowboy
+      vary: Accept-Encoding, Origin, X-Loggedin
+      via:
+      - 1.1 vegur
+      - 1.1 varnish
+      - 1.1 varnish
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 3acaca2d-5446-4de3-94cb-dd597f6ce065
+      x-runtime: '0.226348'
+      x-served-by: cache-den19646-DEN, cache-lhr7334-LHR
+      x-timer: S1590668913.235228,VS0,VE390
+      x-xss-protection: 1; mode=block
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"type_of":"article","id":345385,"title":"test no things","description":"R
+        Markdown   This is an R Markdown document. Markdown is a simple formatting
+        syntax for auth...","readable_publish_date":null,"slug":"test-no-things-28dl-temp-slug-626472","path":"/daveparr/test-no-things-28dl-temp-slug-626472","url":"https://dev.to/daveparr/test-no-things-28dl-temp-slug-626472","comments_count":0,"public_reactions_count":0,"collection_id":null,"published_timestamp":"","positive_reactions_count":0,"cover_image":null,"social_image":"https://dev.to/social_previews/article/345385.png","canonical_url":"https://dev.to/daveparr/test-no-things-28dl-temp-slug-626472","created_at":"2020-05-28T12:28:33Z","edited_at":null,"crossposted_at":null,"published_at":null,"last_comment_at":"2017-01-01T05:00:00Z","tag_list":"","tags":[],"body_html":"\u003ch2\u003e\n  \u003ca
+        name=\"r-markdown\" href=\"#r-markdown\" class=\"anchor\"\u003e\n  \u003c/a\u003e\n  R
+        Markdown\n\u003c/h2\u003e\n\n\u003cp\u003eThis is an R Markdown document.
+        Markdown is a simple formatting syntax\u003cbr\u003e\nfor authoring HTML,
+        PDF, and MS Word documents. For more details on\u003cbr\u003e\nusing R Markdown
+        see \u003ca href=\"http://rmarkdown.rstudio.com\"\u003ehttp://rmarkdown.rstudio.com\u003c/a\u003e.\u003c/p\u003e\n\n\u003cp\u003eWhen
+        you click the \u003cstrong\u003eKnit\u003c/strong\u003e button a document
+        will be generated that\u003cbr\u003e\nincludes both content as well as the
+        output of any embedded R code\u003cbr\u003e\nchunks within the document. You
+        can embed an R code chunk like this:\u003cbr\u003e\n\u003c/p\u003e\n\n\u003cdiv
+        class=\"highlight\"\u003e\u003cpre class=\"highlight r\"\u003e\u003ccode\u003e\u003cspan
+        class=\"n\"\u003emtcars\u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan
+        class=\"o\"\u003e%\u0026gt;%\u003c/span\u003e\u003cspan class=\"w\"\u003e\n  \u003c/span\u003e\u003cspan
+        class=\"n\"\u003egroup_by\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan
+        class=\"n\"\u003ecyl\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\u003cspan
+        class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"o\"\u003e%\u0026gt;%\u003c/span\u003e\u003cspan
+        class=\"w\"\u003e\n  \u003c/span\u003e\u003cspan class=\"n\"\u003esummarise\u003c/span\u003e\u003cspan
+        class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003emean\u003c/span\u003e\u003cspan
+        class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003e\u003cspan
+        class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"n\"\u003emean\u003c/span\u003e\u003cspan
+        class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003edisp\u003c/span\u003e\u003cspan
+        class=\"p\"\u003e),\u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan
+        class=\"n\"\u003en\u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan
+        class=\"o\"\u003e=\u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan
+        class=\"n\"\u003en\u003c/span\u003e\u003cspan class=\"p\"\u003e())\u003c/span\u003e\u003cspan
+        class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"o\"\u003e%\u0026gt;%\u003c/span\u003e\u003cspan
+        class=\"w\"\u003e \n  \u003c/span\u003e\u003cspan class=\"n\"\u003eknitr\u003c/span\u003e\u003cspan
+        class=\"o\"\u003e::\u003c/span\u003e\u003cspan class=\"n\"\u003ekable\u003c/span\u003e\u003cspan
+        class=\"p\"\u003e()\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\n\n\n\u003cdiv
+        class=\"table-wrapper-paragraph\"\u003e\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003ecyl\u003c/th\u003e\n\u003cth\u003emean\u003c/th\u003e\n\u003cth\u003en\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003e4\u003c/td\u003e\n\u003ctd\u003e105.1364\u003c/td\u003e\n\u003ctd\u003e11\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e6\u003c/td\u003e\n\u003ctd\u003e183.3143\u003c/td\u003e\n\u003ctd\u003e7\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e8\u003c/td\u003e\n\u003ctd\u003e353.1000\u003c/td\u003e\n\u003ctd\u003e14\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\u003c/div\u003e\n\n\u003ch2\u003e\n  \u003ca
+        name=\"including-plots\" href=\"#including-plots\" class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Including
+        Plots\n\u003c/h2\u003e\n\n\u003cp\u003eYou can also embed plots, for example:\u003c/p\u003e\n\n\u003cp\u003e\u003ca
+        href=\"/Users/davidparr/Documents/dev.to.ol/test_files/figure-gfm/pressure-1.png\"
+        class=\"article-body-image-wrapper\"\u003e\u003cimg src=\"/Users/davidparr/Documents/dev.to.ol/test_files/figure-gfm/pressure-1.png\"
+        alt=\"\" loading=\"lazy\"\u003e\u003c/a\u003e\u0026lt;!-- --\u0026gt;\u003c/p\u003e\n\n\u003cp\u003eNote
+        that the \u003ccode\u003eecho = FALSE\u003c/code\u003e parameter was added
+        to the code chunk to\u003cbr\u003e\nprevent printing of the R code that generated
+        the plot.\u003c/p\u003e\n\n","body_markdown":"## R Markdown\n\nThis is an
+        R Markdown document. Markdown is a simple formatting syntax\nfor authoring
+        HTML, PDF, and MS Word documents. For more details on\nusing R Markdown see
+        \u003chttp://rmarkdown.rstudio.com\u003e.\n\nWhen you click the **Knit** button
+        a document will be generated that\nincludes both content as well as the output
+        of any embedded R code\nchunks within the document. You can embed an R code
+        chunk like this:\n\n``` r\nmtcars %\u003e%\n  group_by(cyl) %\u003e%\n  summarise(mean
+        = mean(disp), n = n()) %\u003e% \n  knitr::kable()\n```\n\n| cyl |     mean
+        |  n |\n| --: | -------: | -: |\n|   4 | 105.1364 | 11 |\n|   6 | 183.3143
+        |  7 |\n|   8 | 353.1000 | 14 |\n\n## Including Plots\n\nYou can also embed
+        plots, for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/test_files/figure-gfm/pressure-1.png)\u003c!--
+        --\u003e\n\nNote that the `echo = FALSE` parameter was added to the code chunk
+        to\nprevent printing of the R code that generated the plot.\n","user":{"name":"Dave
+        Parr","username":"daveparr","twitter_username":"DaveParr","github_username":"DaveParr","website_url":"https://www.daveparr.info","profile_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--v1yPvsiE--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg","profile_image_90":"https://res.cloudinary.com/practicaldev/image/fetch/s--J8DJ9NrN--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg"}}'
+  recorded_at: 2020-05-28 12:28:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
