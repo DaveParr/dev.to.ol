@@ -16,6 +16,6 @@
 #' @export
 #' @importFrom httr content GET add_headers
 get_my_user <- function(key = NA) {
-  httr::content(httr::GET(url = "https://dev.to/api/users/me",
-                          httr::add_headers("api-key" = api_key(key = key))))
+  httr::GET(url = "https://dev.to/api/users/me",
+            httr::add_headers("api-key" = api_key(key = key)))
 }
