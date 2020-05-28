@@ -1,18 +1,16 @@
+library("testthat")
 library("webmockr")
 library("crul")
-library("testthat")
 
-stub_registry_clear()
+webmockr::stub_registry_clear()
 
-# make a stub
-stub_request("get", "https://dev.to/api/users/me") %>%
-  to_return(body = "success!", status = 200)
+webmockr::stub_request("get", "https://dev.to/api/users/me") %>%
+  webmockr::to_return(body = "success!", status = 200)
 
-stub_registry()
+response <- dev.to.ol::get_my_user()
 
-# make the request
-z <- dev.to.ol::get_my_user()
+test_that("stubbed response is 200", {
+  expect_is(response, "response")
+  expect_equal(response$status_code, 200)
+})
 
-# run tests (nothing returned means it passed)
-expect_is(z, "response")
-expect_equal(z$status_code, 200)
