@@ -1,6 +1,8 @@
 library("testthat")
 library("webmockr")
-library("crul")
+library("httr")
+
+webmockr::enable(adapter = "httr")
 
 webmockr::stub_registry_clear()
 
