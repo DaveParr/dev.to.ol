@@ -66,7 +66,5 @@ post_new_article <-
         encode = 'json'
       )
       response
-    } else {
-      message(attr(check_file, "msg"))
     }
   }

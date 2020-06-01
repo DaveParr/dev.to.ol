@@ -14,13 +14,13 @@ http_interactions:
         = mean(disp), n = n()) %>% \n  knitr::kable()\n```\n\n| cyl |     mean |  n
         |\n| --: | -------: | -: |\n|   4 | 105.1364 | 11 |\n|   6 | 183.3143 |  7
         |\n|   8 | 353.1000 | 14 |\n\n## Including Plots\n\nYou can also embed plots,
-        for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/test_files/figure-gfm/pressure-1.png)<!--
+        for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png)<!--
         -->\n\nNote that the `echo = FALSE` parameter was added to the code chunk
         to\nprevent printing of the R code that generated the plot.\n"}}'
     headers:
       Accept: application/json, text/xml, application/xml, */*
       Content-Type: application/json
-      api-key: hapxsfbB4PPSDHkLkQiA4VHN
+      api-key: <<<my_api_key>>>
   response:
     status:
       status_code: 201
@@ -35,9 +35,9 @@ http_interactions:
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
       content-type: application/json; charset=utf-8
-      date: Thu, 28 May 2020 12:28:33 GMT
-      etag: W/"9675aa5e83ce889e69765c624ab4c293"
-      location: https://dev.to/daveparr/test-no-things-28dl-temp-slug-626472
+      date: Fri, 29 May 2020 16:01:38 GMT
+      etag: W/"df82f96208369403ac682202de68a908"
+      location: https://dev.to/daveparr/test-no-things-1hpi-temp-slug-5655496
       referrer-policy: strict-origin-when-cross-origin
       server: Cowboy
       vary: Accept-Encoding, Origin, X-Loggedin
@@ -51,17 +51,17 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: 3acaca2d-5446-4de3-94cb-dd597f6ce065
-      x-runtime: '0.226348'
-      x-served-by: cache-den19646-DEN, cache-lhr7334-LHR
-      x-timer: S1590668913.235228,VS0,VE390
+      x-request-id: a59e7c1d-878f-4ffc-a538-70d067488d39
+      x-runtime: '0.235084'
+      x-served-by: cache-den19639-DEN, cache-lhr7351-LHR
+      x-timer: S1590768098.342230,VS0,VE509
       x-xss-protection: 1; mode=block
     body:
       encoding: UTF-8
       file: no
-      string: '{"type_of":"article","id":345385,"title":"test no things","description":"R
+      string: '{"type_of":"article","id":346098,"title":"test no things","description":"R
         Markdown   This is an R Markdown document. Markdown is a simple formatting
-        syntax for auth...","readable_publish_date":null,"slug":"test-no-things-28dl-temp-slug-626472","path":"/daveparr/test-no-things-28dl-temp-slug-626472","url":"https://dev.to/daveparr/test-no-things-28dl-temp-slug-626472","comments_count":0,"public_reactions_count":0,"collection_id":null,"published_timestamp":"","positive_reactions_count":0,"cover_image":null,"social_image":"https://dev.to/social_previews/article/345385.png","canonical_url":"https://dev.to/daveparr/test-no-things-28dl-temp-slug-626472","created_at":"2020-05-28T12:28:33Z","edited_at":null,"crossposted_at":null,"published_at":null,"last_comment_at":"2017-01-01T05:00:00Z","tag_list":"","tags":[],"body_html":"\u003ch2\u003e\n  \u003ca
+        syntax for auth...","readable_publish_date":null,"slug":"test-no-things-1hpi-temp-slug-5655496","path":"/daveparr/test-no-things-1hpi-temp-slug-5655496","url":"https://dev.to/daveparr/test-no-things-1hpi-temp-slug-5655496","comments_count":0,"public_reactions_count":0,"collection_id":null,"published_timestamp":"","positive_reactions_count":0,"cover_image":null,"social_image":"https://dev.to/social_previews/article/346098.png","canonical_url":"https://dev.to/daveparr/test-no-things-1hpi-temp-slug-5655496","created_at":"2020-05-29T16:01:38Z","edited_at":null,"crossposted_at":null,"published_at":null,"last_comment_at":"2017-01-01T05:00:00Z","tag_list":"","tags":[],"body_html":"\u003ch2\u003e\n  \u003ca
         name=\"r-markdown\" href=\"#r-markdown\" class=\"anchor\"\u003e\n  \u003c/a\u003e\n  R
         Markdown\n\u003c/h2\u003e\n\n\u003cp\u003eThis is an R Markdown document.
         Markdown is a simple formatting syntax\u003cbr\u003e\nfor authoring HTML,
@@ -93,8 +93,8 @@ http_interactions:
         class=\"table-wrapper-paragraph\"\u003e\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003ecyl\u003c/th\u003e\n\u003cth\u003emean\u003c/th\u003e\n\u003cth\u003en\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003e4\u003c/td\u003e\n\u003ctd\u003e105.1364\u003c/td\u003e\n\u003ctd\u003e11\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e6\u003c/td\u003e\n\u003ctd\u003e183.3143\u003c/td\u003e\n\u003ctd\u003e7\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e8\u003c/td\u003e\n\u003ctd\u003e353.1000\u003c/td\u003e\n\u003ctd\u003e14\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\u003c/div\u003e\n\n\u003ch2\u003e\n  \u003ca
         name=\"including-plots\" href=\"#including-plots\" class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Including
         Plots\n\u003c/h2\u003e\n\n\u003cp\u003eYou can also embed plots, for example:\u003c/p\u003e\n\n\u003cp\u003e\u003ca
-        href=\"/Users/davidparr/Documents/dev.to.ol/test_files/figure-gfm/pressure-1.png\"
-        class=\"article-body-image-wrapper\"\u003e\u003cimg src=\"/Users/davidparr/Documents/dev.to.ol/test_files/figure-gfm/pressure-1.png\"
+        href=\"/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png\"
+        class=\"article-body-image-wrapper\"\u003e\u003cimg src=\"/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png\"
         alt=\"\" loading=\"lazy\"\u003e\u003c/a\u003e\u0026lt;!-- --\u0026gt;\u003c/p\u003e\n\n\u003cp\u003eNote
         that the \u003ccode\u003eecho = FALSE\u003c/code\u003e parameter was added
         to the code chunk to\u003cbr\u003e\nprevent printing of the R code that generated
@@ -108,9 +108,9 @@ http_interactions:
         = mean(disp), n = n()) %\u003e% \n  knitr::kable()\n```\n\n| cyl |     mean
         |  n |\n| --: | -------: | -: |\n|   4 | 105.1364 | 11 |\n|   6 | 183.3143
         |  7 |\n|   8 | 353.1000 | 14 |\n\n## Including Plots\n\nYou can also embed
-        plots, for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/test_files/figure-gfm/pressure-1.png)\u003c!--
+        plots, for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png)\u003c!--
         --\u003e\n\nNote that the `echo = FALSE` parameter was added to the code chunk
         to\nprevent printing of the R code that generated the plot.\n","user":{"name":"Dave
         Parr","username":"daveparr","twitter_username":"DaveParr","github_username":"DaveParr","website_url":"https://www.daveparr.info","profile_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--v1yPvsiE--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg","profile_image_90":"https://res.cloudinary.com/practicaldev/image/fetch/s--J8DJ9NrN--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg"}}'
-  recorded_at: 2020-05-28 12:28:33 GMT
+  recorded_at: 2020-05-29 16:01:38 GMT
   recorded_with: vcr/0.5.4, webmockr/0.6.2

@@ -1,0 +1,28 @@
+http_interactions:
+- request:
+    method: head
+    uri: https://httpbin.org/get
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.64.1 r-curl/3.3 crul/0.9.0
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: 'HTTP/2 200 '
+      date: Fri, 29 May 2020 14:59:19 GMT
+      content-type: application/json
+      content-length: '320'
+      server: gunicorn/19.9.0
+      access-control-allow-origin: '*'
+      access-control-allow-credentials: 'true'
+    body:
+      encoding: UTF-8
+      file: no
+      string: ''
+  recorded_at: 2020-05-29 14:59:19 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
