@@ -1,17 +1,8 @@
-library("testthat")
-library("webmockr")
-library("httr")
+test_that("gets users articles", {
+  vcr::use_cassette("get_users_articles", {
+    response <- dev.to.ol::get_users_articles()
+  })
 
-webmockr::enable(adapter = "httr")
-
-webmockr::stub_registry_clear()
-
-webmockr::stub_request("get", "https://dev.to/api/articles/me") %>%
-  webmockr::to_return(body = "success!", status = 200)
-
-response <- dev.to.ol::get_users_articles()
-
-test_that("stubbed response is 200", {
   expect_is(response, "response")
   expect_equal(response$status_code, 200)
 })

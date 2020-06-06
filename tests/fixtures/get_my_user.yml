@@ -1,0 +1,58 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://dev.to/api/users/me
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      api-key: <<<my_api_key>>>
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      accept-ranges:
+      - bytes
+      - bytes
+      - bytes
+      - bytes
+      access-control-allow-origin: '*'
+      age:
+      - '0'
+      - '0'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      content-type: application/json; charset=utf-8
+      date: Sat, 06 Jun 2020 12:25:24 GMT
+      etag: W/"72b55f104bef23c80c817d2ddd0f5067"
+      referrer-policy: strict-origin-when-cross-origin
+      server: Cowboy
+      vary: Accept-Encoding, Origin, X-Loggedin
+      via:
+      - 1.1 vegur
+      - 1.1 varnish
+      - 1.1 varnish
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 8525a8d3-3a49-4b58-897d-138195ace6e9
+      x-runtime: '0.038818'
+      x-served-by: cache-den19643-DEN, cache-lhr7367-LHR
+      x-timer: S1591446325.665208,VS0,VE311
+      x-xss-protection: 1; mode=block
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"type_of":"user","id":150692,"username":"daveparr","name":"Dave Parr","summary":"Data-scientist
+        who loves to use #datascienceforgood, especially in ecology, energy and the
+        environment. Bonsai, gardening, bikes and music when I''m not at a keyboard.","twitter_username":"DaveParr","github_username":"DaveParr","website_url":"https://www.daveparr.info","location":"Cardiff,
+        Wales","joined_at":"Mar 29, 2019","profile_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--842YRV0q--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg"}'
+  recorded_at: 2020-06-06 12:25:25 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
