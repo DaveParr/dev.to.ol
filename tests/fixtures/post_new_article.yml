@@ -4,19 +4,18 @@ http_interactions:
     uri: https://dev.to/api/articles
     body:
       encoding: ''
-      string: '{"article":{"title":"test no things","series":{},"published":{},"tags":{},"body_markdown":"##
+      string: '{"article":{"title":"test no things","series":"test","published":false,"tags":["test","test1","test2"],"body_markdown":"##
         R Markdown\n\nThis is an R Markdown document. Markdown is a simple formatting
         syntax\nfor authoring HTML, PDF, and MS Word documents. For more details on\nusing
         R Markdown see <http://rmarkdown.rstudio.com>.\n\nWhen you click the **Knit**
         button a document will be generated that\nincludes both content as well as
         the output of any embedded R code\nchunks within the document. You can embed
         an R code chunk like this:\n\n``` r\nmtcars %>%\n  group_by(cyl) %>%\n  summarise(mean
-        = mean(disp), n = n()) %>% \n  knitr::kable()\n```\n\n| cyl |     mean |  n
-        |\n| --: | -------: | -: |\n|   4 | 105.1364 | 11 |\n|   6 | 183.3143 |  7
-        |\n|   8 | 353.1000 | 14 |\n\n## Including Plots\n\nYou can also embed plots,
-        for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png)<!--
+        = mean(disp), n = n())\n```\n\n| cyl |     mean |  n |\n| --: | -------: |
+        -: |\n|   4 | 105.1364 | 11 |\n|   6 | 183.3143 |  7 |\n|   8 | 353.1000 |
+        14 |\n\n## Including Plots\n\nYou can also embed plots, for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png)<!--
         -->\n\nNote that the `echo = FALSE` parameter was added to the code chunk
-        to\nprevent printing of the R code that generated the plot.\n"}}'
+        to\nprevent printing of the R code that generated the plot.\n","main_image":"https://images.unsplash.com/photo-1494026222377-872a605b54ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"}}'
     headers:
       Accept: application/json, text/xml, application/xml, */*
       Content-Type: application/json
@@ -35,9 +34,9 @@ http_interactions:
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
       content-type: application/json; charset=utf-8
-      date: Fri, 29 May 2020 16:01:38 GMT
-      etag: W/"df82f96208369403ac682202de68a908"
-      location: https://dev.to/daveparr/test-no-things-1hpi-temp-slug-5655496
+      date: Wed, 17 Jun 2020 11:31:33 GMT
+      etag: W/"665ff5ccb389a96ab17d4f82b2147bfe"
+      location: https://dev.to/daveparr/test-no-things-i6o-temp-slug-3397955
       referrer-policy: strict-origin-when-cross-origin
       server: Cowboy
       vary: Accept-Encoding, Origin, X-Loggedin
@@ -51,17 +50,18 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: a59e7c1d-878f-4ffc-a538-70d067488d39
-      x-runtime: '0.235084'
-      x-served-by: cache-den19639-DEN, cache-lhr7351-LHR
-      x-timer: S1590768098.342230,VS0,VE509
+      x-request-id: 5928cf02-e0e2-4030-9cdb-77a27823b98a
+      x-runtime: '0.552707'
+      x-served-by: cache-den19638-DEN, cache-lhr7356-LHR
+      x-timer: S1592393493.799978,VS0,VE830
       x-xss-protection: 1; mode=block
     body:
       encoding: UTF-8
       file: no
-      string: '{"type_of":"article","id":346098,"title":"test no things","description":"R
+      string: '{"type_of":"article","id":357480,"title":"test no things","description":"R
         Markdown   This is an R Markdown document. Markdown is a simple formatting
-        syntax for auth...","readable_publish_date":null,"slug":"test-no-things-1hpi-temp-slug-5655496","path":"/daveparr/test-no-things-1hpi-temp-slug-5655496","url":"https://dev.to/daveparr/test-no-things-1hpi-temp-slug-5655496","comments_count":0,"public_reactions_count":0,"collection_id":null,"published_timestamp":"","positive_reactions_count":0,"cover_image":null,"social_image":"https://dev.to/social_previews/article/346098.png","canonical_url":"https://dev.to/daveparr/test-no-things-1hpi-temp-slug-5655496","created_at":"2020-05-29T16:01:38Z","edited_at":null,"crossposted_at":null,"published_at":null,"last_comment_at":"2017-01-01T05:00:00Z","tag_list":"","tags":[],"body_html":"\u003ch2\u003e\n  \u003ca
+        syntax for auth...","readable_publish_date":null,"slug":"test-no-things-i6o-temp-slug-3397955","path":"/daveparr/test-no-things-i6o-temp-slug-3397955","url":"https://dev.to/daveparr/test-no-things-i6o-temp-slug-3397955","comments_count":0,"public_reactions_count":0,"collection_id":7354,"published_timestamp":"","positive_reactions_count":0,"cover_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--9Z62r4-9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","social_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--D4h4hFuF--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","canonical_url":"https://dev.to/daveparr/test-no-things-i6o-temp-slug-3397955","created_at":"2020-06-17T11:31:33Z","edited_at":null,"crossposted_at":null,"published_at":null,"last_comment_at":"2017-01-01T05:00:00Z","tag_list":"test,
+        test1, test2","tags":["test","test1","test2"],"body_html":"\u003ch2\u003e\n  \u003ca
         name=\"r-markdown\" href=\"#r-markdown\" class=\"anchor\"\u003e\n  \u003c/a\u003e\n  R
         Markdown\n\u003c/h2\u003e\n\n\u003cp\u003eThis is an R Markdown document.
         Markdown is a simple formatting syntax\u003cbr\u003e\nfor authoring HTML,
@@ -86,10 +86,7 @@ http_interactions:
         class=\"n\"\u003en\u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan
         class=\"o\"\u003e=\u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan
         class=\"n\"\u003en\u003c/span\u003e\u003cspan class=\"p\"\u003e())\u003c/span\u003e\u003cspan
-        class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"o\"\u003e%\u0026gt;%\u003c/span\u003e\u003cspan
-        class=\"w\"\u003e \n  \u003c/span\u003e\u003cspan class=\"n\"\u003eknitr\u003c/span\u003e\u003cspan
-        class=\"o\"\u003e::\u003c/span\u003e\u003cspan class=\"n\"\u003ekable\u003c/span\u003e\u003cspan
-        class=\"p\"\u003e()\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\n\n\n\u003cdiv
+        class=\"w\"\u003e\n\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\n\n\n\u003cdiv
         class=\"table-wrapper-paragraph\"\u003e\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003ecyl\u003c/th\u003e\n\u003cth\u003emean\u003c/th\u003e\n\u003cth\u003en\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003e4\u003c/td\u003e\n\u003ctd\u003e105.1364\u003c/td\u003e\n\u003ctd\u003e11\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e6\u003c/td\u003e\n\u003ctd\u003e183.3143\u003c/td\u003e\n\u003ctd\u003e7\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e8\u003c/td\u003e\n\u003ctd\u003e353.1000\u003c/td\u003e\n\u003ctd\u003e14\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\u003c/div\u003e\n\n\u003ch2\u003e\n  \u003ca
         name=\"including-plots\" href=\"#including-plots\" class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Including
         Plots\n\u003c/h2\u003e\n\n\u003cp\u003eYou can also embed plots, for example:\u003c/p\u003e\n\n\u003cp\u003e\u003ca
@@ -105,12 +102,11 @@ http_interactions:
         a document will be generated that\nincludes both content as well as the output
         of any embedded R code\nchunks within the document. You can embed an R code
         chunk like this:\n\n``` r\nmtcars %\u003e%\n  group_by(cyl) %\u003e%\n  summarise(mean
-        = mean(disp), n = n()) %\u003e% \n  knitr::kable()\n```\n\n| cyl |     mean
-        |  n |\n| --: | -------: | -: |\n|   4 | 105.1364 | 11 |\n|   6 | 183.3143
-        |  7 |\n|   8 | 353.1000 | 14 |\n\n## Including Plots\n\nYou can also embed
-        plots, for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png)\u003c!--
+        = mean(disp), n = n())\n```\n\n| cyl |     mean |  n |\n| --: | -------: |
+        -: |\n|   4 | 105.1364 | 11 |\n|   6 | 183.3143 |  7 |\n|   8 | 353.1000 |
+        14 |\n\n## Including Plots\n\nYou can also embed plots, for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png)\u003c!--
         --\u003e\n\nNote that the `echo = FALSE` parameter was added to the code chunk
         to\nprevent printing of the R code that generated the plot.\n","user":{"name":"Dave
         Parr","username":"daveparr","twitter_username":"DaveParr","github_username":"DaveParr","website_url":"https://www.daveparr.info","profile_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--v1yPvsiE--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg","profile_image_90":"https://res.cloudinary.com/practicaldev/image/fetch/s--J8DJ9NrN--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg"}}'
-  recorded_at: 2020-05-29 16:01:38 GMT
-  recorded_with: vcr/0.5.4, webmockr/0.6.2
+  recorded_at: 2020-06-17 11:31:33 GMT
+  recorded_with: vcr/0.5.4.91, webmockr/0.6.2
