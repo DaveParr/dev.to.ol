@@ -2,6 +2,7 @@
 
 export("%>%")
 export(api_key)
+export(create_new_article)
 export(get_my_user)
 export(get_users_articles)
 export(is_postable_Rmd)

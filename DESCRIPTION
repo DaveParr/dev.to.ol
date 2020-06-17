@@ -12,7 +12,8 @@ RoxygenNote: 6.1.1
 Imports: 
     rmarkdown,
     assertthat,
-    magrittr
+    magrittr,
+    glue
 Suggests: 
     testthat (>= 2.1.0),
     vcr
