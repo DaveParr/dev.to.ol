@@ -27,6 +27,8 @@ The following YAML arguments are read from the file YAML frontmatter if present:
   \item{tags}{list of character strings: \code{["tag1", "tag2"]}}
 }
 
+dev.to will not allow tags with spaces, so tags with spaces will be automatically collapsed.
+
 The default table output method renders a very large print code block.
 The workaround is to use  \code{\link[knitr]{kable}}.
 }

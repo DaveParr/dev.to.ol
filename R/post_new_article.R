@@ -12,6 +12,8 @@
 #'   \item{tags}{list of character strings: \code{["tag1", "tag2"]}}
 #' }
 #'
+#' dev.to will not allow tags with spaces, so tags with spaces will be automatically collapsed.
+#'
 #' The default table output method renders a very large print code block.
 #' The workaround is to use  \code{\link[knitr]{kable}}.
 #'
@@ -42,6 +44,8 @@ post_new_article <-
 
     if (check_file) {
       file_frontmatter <- rmarkdown::yaml_front_matter(file)
+
+      file_frontmatter$tags <- purrr::map(file_frontmatter$tags, stringr::str_remove_all, " ")
 
       output_path <- rmarkdown::render(file,
                                        output_format = 'github_document',
