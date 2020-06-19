@@ -1,6 +1,7 @@
 #' @title Get the authenticated user
 #' @description Provides information on the authenticated user
 #' @param key the api you have set up on DEV.TO, Default: NA
+#' @param tidy if the response should be parsed into a tibble, Default: TRUE
 #' @return user stuff
 #' @details if no key is supplied, will check for key named DEVTO in `.Renviron`
 #' @examples
@@ -15,7 +16,7 @@
 #' @rdname get_my_user
 #' @export
 #' @importFrom httr content GET add_headers
-get_my_user <- function(key = NA) {
+get_my_user <- function(key = NA, tidy = TRUE) {
 
   check_internet()
 
@@ -27,5 +28,12 @@ get_my_user <- function(key = NA) {
 
   check_status(response, operation = "getUserArticles", expected = 200)
 
-  response
+  if (tidy) {
+    response %>%
+      httr::content() %>%
+      tibble(key = names(.), value = as.character(.)) %>%
+      select(key, value)
+  } else {
+    response
+  }
 }

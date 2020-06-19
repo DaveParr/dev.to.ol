@@ -4,10 +4,12 @@
 \alias{get_my_user}
 \title{Get the authenticated user}
 \usage{
-get_my_user(key = NA)
+get_my_user(key = NA, tidy = TRUE)
 }
 \arguments{
 \item{key}{the api you have set up on DEV.TO, Default: NA}
+
+\item{tidy}{if the response should be parsed into a tibble, Default: TRUE}
 }
 \value{
 user stuff
