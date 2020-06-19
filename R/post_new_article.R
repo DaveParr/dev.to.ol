@@ -40,6 +40,9 @@
 post_new_article <-
   function(file,
            key = NA) {
+
+    check_internet()
+
     check_file <- is_postable_Rmd(file)
 
     if (check_file) {
@@ -58,6 +61,7 @@ post_new_article <-
       response <- httr::POST(
         url = "https://dev.to/api/articles",
         httr::add_headers("api-key" = api_key(key = key)),
+        user_agent,
         body = list(
           article = list(
             title = file_frontmatter$title,
@@ -70,6 +74,11 @@ post_new_article <-
         ),
         encode = 'json'
       )
+
+      check_json(response)
+
+      check_status(response, operation = "createArticle", expected = 201 )
+
       response
     }
   }

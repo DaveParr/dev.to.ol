@@ -16,6 +16,16 @@
 #' @export
 #' @importFrom httr content GET add_headers
 get_my_user <- function(key = NA) {
-  httr::GET(url = "https://dev.to/api/users/me",
-            httr::add_headers("api-key" = api_key(key = key)))
+
+  check_internet()
+
+  response <- httr::GET(url = "https://dev.to/api/users/me",
+            httr::add_headers("api-key" = api_key(key = key)),
+            user_agent)
+
+  check_json(response)
+
+  check_status(response, operation = "getUserArticles", expected = 200)
+
+  response
 }
