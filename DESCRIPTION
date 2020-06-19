@@ -13,7 +13,10 @@ Imports:
     rmarkdown,
     assertthat,
     magrittr,
-    glue
+    glue,
+    tidyr,
+    attempt,
+    curl
 Suggests: 
     testthat (>= 2.1.0),
     vcr

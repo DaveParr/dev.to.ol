@@ -4,10 +4,12 @@
 \alias{get_users_articles}
 \title{Get the authenticated users articles}
 \usage{
-get_users_articles(key = NA)
+get_users_articles(key = NA, tidy = TRUE)
 }
 \arguments{
-\item{key}{the api you have set up on DEV.TO, Default: NA}
+\item{key}{the api key you have set up on DEV.TO, Default: NA}
+
+\item{tidy}{if the response should be parsed into a tibble, Default: TRUE}
 }
 \value{
 article stuff
@@ -16,7 +18,7 @@ article stuff
 Provides lots of info on your users articles
 }
 \details{
-if no key is supplied, will check for key named DEVTO in `.Renviron`
+If no \code{key} is supplied, will check for key named DEVTO in `.Renviron`. If \code{tidy} is \code{FALSE}, then the full, raw response is returned.
 }
 \examples{
 \dontrun{

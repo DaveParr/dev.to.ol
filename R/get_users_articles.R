@@ -1,8 +1,9 @@
 #' @title Get the authenticated users articles
 #' @description Provides lots of info on your users articles
-#' @param key the api you have set up on DEV.TO, Default: NA
+#' @param key the api key you have set up on DEV.TO, Default: NA
+#' @param tidy if the response should be parsed into a tibble, Default: TRUE
 #' @return article stuff
-#' @details if no key is supplied, will check for key named DEVTO in `.Renviron`
+#' @details If no \code{key} is supplied, will check for key named DEVTO in `.Renviron`. If \code{tidy} is \code{FALSE}, then the full, raw response is returned.
 #' @examples
 #' \dontrun{
 #' if(interactive()){
@@ -15,7 +16,8 @@
 #' @rdname get_users_articles
 #' @export
 #' @importFrom httr content GET add_headers
-get_users_articles <- function(key = NA) {
+#' @importFrom tibble tibble
+get_users_articles <- function(key = NA, tidy = TRUE) {
 
   check_internet()
 
@@ -27,6 +29,12 @@ get_users_articles <- function(key = NA) {
 
   check_status(response, 200)
 
-  response
-
+  if (tidy) {
+    response %>%
+      content() %>%
+      tibble::tibble(articles = .) %>%
+      tidyr::unnest_wider(articles)
+  } else {
+    response
+  }
 }
