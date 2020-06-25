@@ -4,20 +4,22 @@
 \alias{create_new_article}
 \title{Create a new article locally}
 \usage{
-create_new_article(title, series = "series",
-  tags = "[\\"tag1\\", \\"tag2\\"]", file = "")
+create_new_article(title, description = "a description",
+  series = "a series", tags = "[\\"tag1\\", \\"tag2\\"]", file = "")
 }
 \arguments{
 \item{title}{string of the title}
 
-\item{series}{string of the series, Default: 'series'}
+\item{description}{string describing the article, Default: 'a description'}
+
+\item{series}{string of the series, Default: 'a series'}
 
 \item{tags}{string of the YAML array of tags, Default: '['tag1', 'tag2']'}
 
 \item{file}{path of the file to create, should be a "*.Rmd", Default: ''}
 }
 \value{
-By default the yaml boilerplate to the command line. If a file path is included it will create that file.
+By default the yaml boilerplate to the command line. If a file path is included it will create that file. Descriptions do not currently appear to be used in the UI, but are used by integrations, like stackbit.
 }
 \description{
 Make a new file with boilerplate YAML for posting to dev.to
