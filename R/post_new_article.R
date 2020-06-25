@@ -69,7 +69,8 @@ post_new_article <-
             published = file_frontmatter$published,
             tags = file_frontmatter$tags,
             body_markdown = file_string,
-            main_image = file_frontmatter$main_image
+            main_image = file_frontmatter$main_image,
+            description = file_frontmatter$description
           )
         ),
         encode = 'json'

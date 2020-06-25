@@ -15,7 +15,8 @@ http_interactions:
         -: |\n|   4 | 105.1364 | 11 |\n|   6 | 183.3143 |  7 |\n|   8 | 353.1000 |
         14 |\n\n## Including Plots\n\nYou can also embed plots, for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png)<!--
         -->\n\nNote that the `echo = FALSE` parameter was added to the code chunk
-        to\nprevent printing of the R code that generated the plot.\n","main_image":"https://images.unsplash.com/photo-1494026222377-872a605b54ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"}}'
+        to\nprevent printing of the R code that generated the plot.\n","main_image":"https://images.unsplash.com/photo-1494026222377-872a605b54ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80","description":"abstract
+        text"}}'
     headers:
       Accept: application/json, text/xml, application/xml, */*
       Content-Type: application/json
@@ -34,9 +35,9 @@ http_interactions:
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
       content-type: application/json; charset=utf-8
-      date: Wed, 17 Jun 2020 12:08:24 GMT
-      etag: W/"3d8ec46da78fefc8e1ef7faa7ab0aa97"
-      location: https://dev.to/daveparr/test-no-things-2861-temp-slug-872799
+      date: Thu, 25 Jun 2020 15:24:46 GMT
+      etag: W/"f5ba395603d68d62d51a059c18b56274"
+      location: https://dev.to/daveparr/test-no-things-4ccf-temp-slug-2493755
       referrer-policy: strict-origin-when-cross-origin
       server: Cowboy
       vary: Accept-Encoding, Origin, X-Loggedin
@@ -50,17 +51,16 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: 85feccc6-1ef0-4247-a4c9-c167533f9398
-      x-runtime: '0.558018'
-      x-served-by: cache-den19632-DEN, cache-lhr7360-LHR
-      x-timer: S1592395704.172595,VS0,VE723
+      x-request-id: 91b81fac-4187-4d9b-bb89-a556404bae65
+      x-runtime: '0.614198'
+      x-served-by: cache-den19625-DEN, cache-lhr7362-LHR
+      x-timer: S1593098685.215502,VS0,VE889
       x-xss-protection: 1; mode=block
     body:
       encoding: UTF-8
       file: no
-      string: '{"type_of":"article","id":357492,"title":"test no things","description":"R
-        Markdown   This is an R Markdown document. Markdown is a simple formatting
-        syntax for auth...","readable_publish_date":null,"slug":"test-no-things-2861-temp-slug-872799","path":"/daveparr/test-no-things-2861-temp-slug-872799","url":"https://dev.to/daveparr/test-no-things-2861-temp-slug-872799","comments_count":0,"public_reactions_count":0,"collection_id":7354,"published_timestamp":"","positive_reactions_count":0,"cover_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--9Z62r4-9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","social_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--D4h4hFuF--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","canonical_url":"https://dev.to/daveparr/test-no-things-2861-temp-slug-872799","created_at":"2020-06-17T12:08:24Z","edited_at":null,"crossposted_at":null,"published_at":null,"last_comment_at":"2017-01-01T05:00:00Z","tag_list":"test,
+      string: '{"type_of":"article","id":367558,"title":"test no things","description":"abstract
+        text","readable_publish_date":null,"slug":"test-no-things-4ccf-temp-slug-2493755","path":"/daveparr/test-no-things-4ccf-temp-slug-2493755","url":"https://dev.to/daveparr/test-no-things-4ccf-temp-slug-2493755","comments_count":0,"public_reactions_count":0,"collection_id":7354,"published_timestamp":"","positive_reactions_count":0,"cover_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--9Z62r4-9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","social_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--D4h4hFuF--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","canonical_url":"https://dev.to/daveparr/test-no-things-4ccf-temp-slug-2493755","created_at":"2020-06-25T15:24:45Z","edited_at":null,"crossposted_at":null,"published_at":null,"last_comment_at":"2017-01-01T05:00:00Z","tag_list":"test,
         test1, test2","tags":["test","test1","test2"],"body_html":"\u003ch2\u003e\n  \u003ca
         name=\"r-markdown\" href=\"#r-markdown\" class=\"anchor\"\u003e\n  \u003c/a\u003e\n  R
         Markdown\n\u003c/h2\u003e\n\n\u003cp\u003eThis is an R Markdown document.
@@ -108,5 +108,5 @@ http_interactions:
         --\u003e\n\nNote that the `echo = FALSE` parameter was added to the code chunk
         to\nprevent printing of the R code that generated the plot.\n","user":{"name":"Dave
         Parr","username":"daveparr","twitter_username":"DaveParr","github_username":"DaveParr","website_url":"https://www.daveparr.info","profile_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--v1yPvsiE--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg","profile_image_90":"https://res.cloudinary.com/practicaldev/image/fetch/s--J8DJ9NrN--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg"}}'
-  recorded_at: 2020-06-17 12:08:24 GMT
+  recorded_at: 2020-06-25 15:24:46 GMT
   recorded_with: vcr/0.5.4.91, webmockr/0.6.2
