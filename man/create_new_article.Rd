@@ -4,8 +4,13 @@
 \alias{create_new_article}
 \title{Create a new article locally}
 \usage{
-create_new_article(title, description = "a description",
-  series = "a series", tags = "[\\"tag1\\", \\"tag2\\"]", file = "")
+create_new_article(
+  title,
+  description = "a description",
+  series = "a series",
+  tags = "[\\"tag1\\", \\"tag2\\"]",
+  file = ""
+)
 }
 \arguments{
 \item{title}{string of the title}
