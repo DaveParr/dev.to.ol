@@ -8,7 +8,7 @@ LazyData: true
 URL: https://github.com/DaveParr/dev.to.ol
 BugReports: http://that
 Encoding: UTF-8
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
 Imports: 
     rmarkdown,
     assertthat,

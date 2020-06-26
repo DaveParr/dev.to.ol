@@ -18,7 +18,7 @@ article stuff
 Provides lots of info on your users articles
 }
 \details{
-If no \code{key} is supplied, will check for key named DEVTO in `.Renviron`. If \code{tidy} is \code{FALSE}, then the full, raw response is returned.
+If no \code{key} is supplied, will check for key named DEVTO in `.Renviron`. If \code{tidy} is \code{FALSE}, then the full, raw response is returned. Returns both published and unpublished articles, in 2 consecutive calls.
 }
 \examples{
 \dontrun{
@@ -28,6 +28,8 @@ if(interactive()){
 }
 }
 \seealso{
-\code{\link[httr]{content}},\code{\link[httr]{GET}},\code{\link[httr]{add_headers}},
- \code{\link[dev.to.ol]{api_key}}
+\code{\link[httr]{GET}},\code{\link[httr]{add_headers}},\code{\link[httr]{content}}
+ \code{\link[tibble]{tibble}}
+ \code{\link[tidyr]{hoist}}
+ \code{\link[dplyr]{bind}},\code{\link[dplyr]{arrange}},\code{\link[dplyr]{desc}}
 }
