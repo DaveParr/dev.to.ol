@@ -30,4 +30,4 @@ check_json <- function(response) {
 }
 
 #' @importFrom httr user_agent
-user_agent <- user_agent("https://github.com/DaveParr/dev.to.ol")
+user_agent <- httr::user_agent("https://github.com/DaveParr/dev.to.ol")
