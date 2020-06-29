@@ -1,3 +1,6 @@
 .Rproj.user/
 .Rhistory
 .Renviron
+tests/**/*.md
+tests/**/*.html
+tests/**/*.png
