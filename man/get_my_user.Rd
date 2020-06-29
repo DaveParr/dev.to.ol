@@ -28,6 +28,7 @@ if(interactive()){
 }
 }
 \seealso{
-\code{\link[httr]{content}},\code{\link[httr]{GET}},\code{\link[httr]{add_headers}}
- \code{\link[dev.to.ol]{api_key}}
+\code{\link[httr]{GET}},\code{\link[httr]{add_headers}},\code{\link[httr]{content}}
+ \code{\link[tibble]{tibble}}
+ \code{\link[dplyr]{select}}
 }

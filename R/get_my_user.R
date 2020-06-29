@@ -11,11 +11,14 @@
 #'  }
 #' }
 #' @seealso
-#'  \code{\link[httr]{content}},\code{\link[httr]{GET}},\code{\link[httr]{add_headers}}
-#'  \code{\link[dev.to.ol]{api_key}}
+#'  \code{\link[httr]{GET}},\code{\link[httr]{add_headers}},\code{\link[httr]{content}}
+#'  \code{\link[tibble]{tibble}}
+#'  \code{\link[dplyr]{select}}
 #' @rdname get_my_user
 #' @export
-#' @importFrom httr content GET add_headers
+#' @importFrom httr GET add_headers content
+#' @importFrom tibble tibble
+#' @importFrom dplyr select
 get_my_user <- function(key = NA, tidy = TRUE) {
 
   check_internet()
