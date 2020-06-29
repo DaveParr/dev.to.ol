@@ -67,7 +67,7 @@ update_article <- function(id,
 
     check_json(response)
 
-    check_status(response, operation = "createArticle", expected = 200)
+    check_status(response, operation = "updateArticle", expected = 200)
 
     response
   }
