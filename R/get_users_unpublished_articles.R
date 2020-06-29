@@ -1,5 +1,5 @@
-#' @title Get the authenticated users articles
-#' @description Provides lots of info on your users articles
+#' @title Get the authenticated users unpublished articles
+#' @description Provides lots of info on your users unpublished articles
 #' @param key the api key you have set up on DEV.TO, Default: NA
 #' @param tidy if the response should be parsed into a tibble, Default: TRUE
 #' @return article stuff
@@ -15,32 +15,29 @@
 #'  \code{\link[httr]{GET}},\code{\link[httr]{add_headers}},\code{\link[httr]{content}}
 #'  \code{\link[tibble]{tibble}}
 #'  \code{\link[tidyr]{hoist}}
-#' @rdname get_users_articles
+#' @rdname get_users_unpublished_articles
 #' @export
 #' @importFrom httr GET add_headers content
 #' @importFrom tibble tibble
 #' @importFrom tidyr unnest_wider
-get_users_articles <- function(key = NA, tidy = TRUE) {
+get_users_unpublished_articles <- function(key = NA, tidy = TRUE) {
   check_internet()
 
-  response_published <-
-    httr::GET(url = "https://dev.to/api/articles/me",
+  response_unpublished <-
+    httr::GET(url = "https://dev.to/api/articles/me/unpublished",
               httr::add_headers("api-key" = api_key(key = key)),
               user_agent)
 
-  check_json(response_published)
+  check_json(response_unpublished)
 
-  check_status(response_published, 200)
+  check_status(response_unpublished, 200)
 
   if (tidy) {
-    response_published %>%
+    response_unpublished %>%
       httr::content() %>%
       tibble::tibble(articles = .) %>%
       tidyr::unnest_wider(articles)
   } else {
-    response_published
+    response_unpublished
   }
 }
-
-
-
