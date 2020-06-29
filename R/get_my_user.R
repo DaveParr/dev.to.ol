@@ -31,8 +31,8 @@ get_my_user <- function(key = NA, tidy = TRUE) {
   if (tidy) {
     response %>%
       httr::content() %>%
-      tibble(key = names(.), value = as.character(.)) %>%
-      select(key, value)
+      tibble::tibble(key = names(.), value = as.character(.)) %>%
+      dplyr::select(key, value)
   } else {
     response
   }
