@@ -11,28 +11,85 @@
 
 <!-- badges: start -->
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
 The goal of `dev.to.ol` is to help R users publish to dev.to
 
 ## Installation
 
-You can install the unreleased version of dev.to from
-[github](www.github.com) with:
+You can install the dev.to.ol from [github](www.github.com) with
+`remotes`:
 
 ``` r
 remotes::install.github("DaveParr/dev.to.ol")
 ```
 
-## Example
+## Workflow
 
-This is a basic example which shows you how to solve a common problem:
+### Create your article
+
+The `create_new_article` function will give you the front mattter
+boilerplate for an article `.Rmd` file. Optionally supplying a file name
+will create a new file with the front matter at the start.
 
 ``` r
-library(dev.to.ol)
+create_new_article(title = "my title")
+```
 
-post_new_article("./articles/my_article.Rmd")
+### Write your article\!
+
+This is the fun bit. Mark your great ideas down in an `.Rmd`\!
+
+### Post your article
+
+Once the `.Rmd` is written, you can post it to dev.to with
+`post_new_article`
+
+``` r
+post_new_article("./my-great-article.Rmd")
+```
+
+### Check your articles
+
+There are two functions to check the posted articles on dev.to,
+published and unpublished. Both will return a ‘tidy’ data set by
+default.
+
+``` r
+get_users_articles()
+
+Using DEVTO in .Renviron
+The API returned the expected success: 200
+# A tibble: 27 x 20
+   type_of     id title description published published_at slug  path  url  
+   <chr>    <int> <chr> <chr>       <lgl>     <chr>        <chr> <chr> <chr>
+ 1 article 370013 Nati… "I made an… TRUE      2020-06-26T… nati… /dav… http…
+ 2 article 367598 Inve… "Is the de… TRUE      2020-06-26T… inve… /dav… http…
+ 3 article 367500 Why … "Motivatio… TRUE      2020-06-25T… why-… /dav… http…
+ 4 article 345011 Buil… "I'm worki… TRUE      2020-06-25T… buil… /dav… http…
+ 5 article 357514 3 mi… "I’ve made… TRUE      2020-06-17T… 3-mi… /dav… http…
+ 6 article 357411 Is '… "The langu… TRUE      2020-06-17T… is-r… /dav… http…
+ 7 article 357002 Webs… "library(t… TRUE      2020-06-16T… webs… /dav… http…
+ 8 article 356940 Is i… "I seem to… TRUE      2020-06-16T… is-i… /dav… http…
+ 9 article 354878 Reco… "I am writ… TRUE      2020-06-13T… reco… /dav… http…
+10 article 354676 A re… "So I have… TRUE      2020-06-13T… a-re… /dav… http…
+# … with 17 more rows, and 11 more variables: comments_count <int>,
+#   public_reactions_count <int>, page_views_count <int>,
+#   published_timestamp <chr>, body_markdown <chr>,
+#   positive_reactions_count <int>, tag_list <list>, canonical_url <chr>,
+#   user <list>, flare_tag <list>, cover_image <chr>
+```
+
+### Update your article
+
+If you notice you’ve made a mistake, you can get the article id from
+`get_users_articles()`, and use that to send the new version of the
+`.Rmd` to dev.to
+
+``` r
+update_article(id = 151471, "./my-great-article.Rmd")
 ```
 
 ## Authentication
@@ -44,7 +101,36 @@ line like this:
 DEVTO="my_api_key"
 ```
 
+If you use `Rproj` projects (and you should\!), this is easily placed in
+the root directory. Alternatively it can be set at user level for the
+system.
+
 You can set up a key on dev.to [here](https://dev.to/settings/account)
+
+The easiest way to check if this has worked is to run the function to
+check your users details
+
+``` r
+get_my_user()
+Using DEVTO in .Renviron
+The API returned the expected success: 200
+# A tibble: 11 x 2
+   key            value                                                      
+   <chr>          <chr>                                                      
+ 1 type_of        user                                                       
+ 2 id             150692                                                     
+ 3 username       daveparr                                                   
+ 4 name           Dave Parr                                                  
+ 5 summary        Data-scientist who loves to use #datascienceforgood, espec…
+ 6 twitter_usern… DaveParr                                                   
+ 7 github_userna… DaveParr                                                   
+ 8 website_url    https://www.daveparr.info                                  
+ 9 location       Cardiff, Wales                                             
+10 joined_at      Mar 29, 2019                                               
+11 profile_image  https://res.cloudinary.com/practicaldev/image/fetch/s--842…
+```
+
+## Code of Conduct
 
 Please note that this project is released with a [Contributor Code of
 Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree
