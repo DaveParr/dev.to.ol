@@ -4,16 +4,47 @@ http_interactions:
     uri: https://dev.to/api/articles
     body:
       encoding: ''
-      string: '{"article":{"title":"test no things","series":"test","published":false,"tags":["test","test1","test2"],"body_markdown":"##
+      string: '{"article":{"title":"test title","series":"test","published":false,"tags":["test","test1","test2"],"body_markdown":"##
         R Markdown\n\nThis is an R Markdown document. Markdown is a simple formatting
         syntax\nfor authoring HTML, PDF, and MS Word documents. For more details on\nusing
         R Markdown see <http://rmarkdown.rstudio.com>.\n\nWhen you click the **Knit**
         button a document will be generated that\nincludes both content as well as
         the output of any embedded R code\nchunks within the document. You can embed
-        an R code chunk like this:\n\n``` r\nmtcars %>%\n  group_by(cyl) %>%\n  summarise(mean
-        = mean(disp), n = n())\n```\n\n| cyl |     mean |  n |\n| --: | -------: |
-        -: |\n|   4 | 105.1364 | 11 |\n|   6 | 183.3143 |  7 |\n|   8 | 353.1000 |
-        14 |\n\n## Including Plots\n\nYou can also embed plots, for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png)<!--
+        an R code chunk like this:\n\n``` r\nmtcars\n```\n\n    ##                      mpg
+        cyl  disp  hp drat    wt  qsec vs am gear carb\n    ## Mazda RX4           21.0   6
+        160.0 110 3.90 2.620 16.46  0  1    4    4\n    ## Mazda RX4 Wag       21.0   6
+        160.0 110 3.90 2.875 17.02  0  1    4    4\n    ## Datsun 710          22.8   4
+        108.0  93 3.85 2.320 18.61  1  1    4    1\n    ## Hornet 4 Drive      21.4   6
+        258.0 110 3.08 3.215 19.44  1  0    3    1\n    ## Hornet Sportabout   18.7   8
+        360.0 175 3.15 3.440 17.02  0  0    3    2\n    ## Valiant             18.1   6
+        225.0 105 2.76 3.460 20.22  1  0    3    1\n    ## Duster 360          14.3   8
+        360.0 245 3.21 3.570 15.84  0  0    3    4\n    ## Merc 240D           24.4   4
+        146.7  62 3.69 3.190 20.00  1  0    4    2\n    ## Merc 230            22.8   4
+        140.8  95 3.92 3.150 22.90  1  0    4    2\n    ## Merc 280            19.2   6
+        167.6 123 3.92 3.440 18.30  1  0    4    4\n    ## Merc 280C           17.8   6
+        167.6 123 3.92 3.440 18.90  1  0    4    4\n    ## Merc 450SE          16.4   8
+        275.8 180 3.07 4.070 17.40  0  0    3    3\n    ## Merc 450SL          17.3   8
+        275.8 180 3.07 3.730 17.60  0  0    3    3\n    ## Merc 450SLC         15.2   8
+        275.8 180 3.07 3.780 18.00  0  0    3    3\n    ## Cadillac Fleetwood  10.4   8
+        472.0 205 2.93 5.250 17.98  0  0    3    4\n    ## Lincoln Continental 10.4   8
+        460.0 215 3.00 5.424 17.82  0  0    3    4\n    ## Chrysler Imperial   14.7   8
+        440.0 230 3.23 5.345 17.42  0  0    3    4\n    ## Fiat 128            32.4   4  78.7  66
+        4.08 2.200 19.47  1  1    4    1\n    ## Honda Civic         30.4   4  75.7  52
+        4.93 1.615 18.52  1  1    4    2\n    ## Toyota Corolla      33.9   4  71.1  65
+        4.22 1.835 19.90  1  1    4    1\n    ## Toyota Corona       21.5   4 120.1  97
+        3.70 2.465 20.01  1  0    3    1\n    ## Dodge Challenger    15.5   8 318.0
+        150 2.76 3.520 16.87  0  0    3    2\n    ## AMC Javelin         15.2   8
+        304.0 150 3.15 3.435 17.30  0  0    3    2\n    ## Camaro Z28          13.3   8
+        350.0 245 3.73 3.840 15.41  0  0    3    4\n    ## Pontiac Firebird    19.2   8
+        400.0 175 3.08 3.845 17.05  0  0    3    2\n    ## Fiat X1-9           27.3   4  79.0  66
+        4.08 1.935 18.90  1  1    4    1\n    ## Porsche 914-2       26.0   4 120.3  91
+        4.43 2.140 16.70  0  1    5    2\n    ## Lotus Europa        30.4   4  95.1
+        113 3.77 1.513 16.90  1  1    5    2\n    ## Ford Pantera L      15.8   8
+        351.0 264 4.22 3.170 14.50  0  1    5    4\n    ## Ferrari Dino        19.7   6
+        145.0 175 3.62 2.770 15.50  0  1    5    6\n    ## Maserati Bora       15.0   8
+        301.0 335 3.54 3.570 14.60  0  1    5    8\n    ## Volvo 142E          21.4   4
+        121.0 109 4.11 2.780 18.60  1  1    4    2\n\n## Including Plots\n\nYou can
+        also embed plots, for example:\n\n![](/home/davidparr/Dev/dev.to.ol/tests/testthat/test_post_files/figure-gfm/pressure-1.png)<!--
         -->\n\nNote that the `echo = FALSE` parameter was added to the code chunk
         to\nprevent printing of the R code that generated the plot.\n","main_image":"https://images.unsplash.com/photo-1494026222377-872a605b54ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80","description":"abstract
         text"}}'
@@ -35,9 +66,9 @@ http_interactions:
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
       content-type: application/json; charset=utf-8
-      date: Thu, 25 Jun 2020 15:24:46 GMT
-      etag: W/"f5ba395603d68d62d51a059c18b56274"
-      location: https://dev.to/daveparr/test-no-things-4ccf-temp-slug-2493755
+      date: Mon, 29 Jun 2020 14:59:36 GMT
+      etag: W/"3b37fe8360d1d425c0db4d73c142712c"
+      location: https://dev.to/daveparr/test-title-115d-temp-slug-6484737
       referrer-policy: strict-origin-when-cross-origin
       server: Cowboy
       vary: Accept-Encoding, Origin, X-Loggedin
@@ -51,16 +82,16 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: 91b81fac-4187-4d9b-bb89-a556404bae65
-      x-runtime: '0.614198'
-      x-served-by: cache-den19625-DEN, cache-lhr7362-LHR
-      x-timer: S1593098685.215502,VS0,VE889
+      x-request-id: 1e036f1a-6f09-41e1-9523-98477676fa45
+      x-runtime: '0.638861'
+      x-served-by: cache-den19643-DEN, cache-lhr7377-LHR
+      x-timer: S1593442776.869620,VS0,VE915
       x-xss-protection: 1; mode=block
     body:
       encoding: UTF-8
       file: no
-      string: '{"type_of":"article","id":367558,"title":"test no things","description":"abstract
-        text","readable_publish_date":null,"slug":"test-no-things-4ccf-temp-slug-2493755","path":"/daveparr/test-no-things-4ccf-temp-slug-2493755","url":"https://dev.to/daveparr/test-no-things-4ccf-temp-slug-2493755","comments_count":0,"public_reactions_count":0,"collection_id":7354,"published_timestamp":"","positive_reactions_count":0,"cover_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--9Z62r4-9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","social_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--D4h4hFuF--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","canonical_url":"https://dev.to/daveparr/test-no-things-4ccf-temp-slug-2493755","created_at":"2020-06-25T15:24:45Z","edited_at":null,"crossposted_at":null,"published_at":null,"last_comment_at":"2017-01-01T05:00:00Z","tag_list":"test,
+      string: '{"type_of":"article","id":374182,"title":"test title","description":"abstract
+        text","readable_publish_date":null,"slug":"test-title-115d-temp-slug-6484737","path":"/daveparr/test-title-115d-temp-slug-6484737","url":"https://dev.to/daveparr/test-title-115d-temp-slug-6484737","comments_count":0,"public_reactions_count":0,"collection_id":7354,"published_timestamp":"","positive_reactions_count":0,"cover_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--9Z62r4-9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","social_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--D4h4hFuF--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","canonical_url":"https://dev.to/daveparr/test-title-115d-temp-slug-6484737","created_at":"2020-06-29T14:59:36Z","edited_at":null,"crossposted_at":null,"published_at":null,"last_comment_at":"2017-01-01T05:00:00Z","tag_list":"test,
         test1, test2","tags":["test","test1","test2"],"body_html":"\u003ch2\u003e\n  \u003ca
         name=\"r-markdown\" href=\"#r-markdown\" class=\"anchor\"\u003e\n  \u003c/a\u003e\n  R
         Markdown\n\u003c/h2\u003e\n\n\u003cp\u003eThis is an R Markdown document.
@@ -72,26 +103,109 @@ http_interactions:
         output of any embedded R code\u003cbr\u003e\nchunks within the document. You
         can embed an R code chunk like this:\u003cbr\u003e\n\u003c/p\u003e\n\n\u003cdiv
         class=\"highlight\"\u003e\u003cpre class=\"highlight r\"\u003e\u003ccode\u003e\u003cspan
-        class=\"n\"\u003emtcars\u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan
-        class=\"o\"\u003e%\u0026gt;%\u003c/span\u003e\u003cspan class=\"w\"\u003e\n  \u003c/span\u003e\u003cspan
-        class=\"n\"\u003egroup_by\u003c/span\u003e\u003cspan class=\"p\"\u003e(\u003c/span\u003e\u003cspan
-        class=\"n\"\u003ecyl\u003c/span\u003e\u003cspan class=\"p\"\u003e)\u003c/span\u003e\u003cspan
-        class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"o\"\u003e%\u0026gt;%\u003c/span\u003e\u003cspan
-        class=\"w\"\u003e\n  \u003c/span\u003e\u003cspan class=\"n\"\u003esummarise\u003c/span\u003e\u003cspan
-        class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003emean\u003c/span\u003e\u003cspan
-        class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"o\"\u003e=\u003c/span\u003e\u003cspan
-        class=\"w\"\u003e \u003c/span\u003e\u003cspan class=\"n\"\u003emean\u003c/span\u003e\u003cspan
-        class=\"p\"\u003e(\u003c/span\u003e\u003cspan class=\"n\"\u003edisp\u003c/span\u003e\u003cspan
-        class=\"p\"\u003e),\u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan
-        class=\"n\"\u003en\u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan
-        class=\"o\"\u003e=\u003c/span\u003e\u003cspan class=\"w\"\u003e \u003c/span\u003e\u003cspan
-        class=\"n\"\u003en\u003c/span\u003e\u003cspan class=\"p\"\u003e())\u003c/span\u003e\u003cspan
-        class=\"w\"\u003e\n\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\n\n\n\u003cdiv
-        class=\"table-wrapper-paragraph\"\u003e\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth\u003ecyl\u003c/th\u003e\n\u003cth\u003emean\u003c/th\u003e\n\u003cth\u003en\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd\u003e4\u003c/td\u003e\n\u003ctd\u003e105.1364\u003c/td\u003e\n\u003ctd\u003e11\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e6\u003c/td\u003e\n\u003ctd\u003e183.3143\u003c/td\u003e\n\u003ctd\u003e7\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd\u003e8\u003c/td\u003e\n\u003ctd\u003e353.1000\u003c/td\u003e\n\u003ctd\u003e14\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\u003c/div\u003e\n\n\u003ch2\u003e\n  \u003ca
-        name=\"including-plots\" href=\"#including-plots\" class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Including
-        Plots\n\u003c/h2\u003e\n\n\u003cp\u003eYou can also embed plots, for example:\u003c/p\u003e\n\n\u003cp\u003e\u003ca
-        href=\"/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png\"
-        class=\"article-body-image-wrapper\"\u003e\u003cimg src=\"/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png\"
+        class=\"n\"\u003emtcars\u003c/span\u003e\u003cspan class=\"w\"\u003e\n\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\n\n\n\n\u003cdiv
+        class=\"highlight\"\u003e\u003cpre class=\"highlight plaintext\"\u003e\u003ccode\u003e##                      mpg
+        cyl  disp  hp drat    wt  qsec vs am gear carb\n\u003ch2\u003e\n  \u003ca
+        name=\"mazda-rx4-210-6-1600-110-390-2620-1646-0-1-4-4\" href=\"#mazda-rx4-210-6-1600-110-390-2620-1646-0-1-4-4\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Mazda RX4           21.0   6 160.0
+        110 3.90 2.620 16.46  0  1    4    4\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"mazda-rx4-wag-210-6-1600-110-390-2875-1702-0-1-4-4\" href=\"#mazda-rx4-wag-210-6-1600-110-390-2875-1702-0-1-4-4\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Mazda RX4 Wag       21.0   6 160.0
+        110 3.90 2.875 17.02  0  1    4    4\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"datsun-710-228-4-1080-93-385-2320-1861-1-1-4-1\" href=\"#datsun-710-228-4-1080-93-385-2320-1861-1-1-4-1\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Datsun 710          22.8   4 108.0  93
+        3.85 2.320 18.61  1  1    4    1\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"hornet-4-drive-214-6-2580-110-308-3215-1944-1-0-3-1\" href=\"#hornet-4-drive-214-6-2580-110-308-3215-1944-1-0-3-1\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Hornet 4 Drive      21.4   6 258.0
+        110 3.08 3.215 19.44  1  0    3    1\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"hornet-sportabout-187-8-3600-175-315-3440-1702-0-0-3-2\" href=\"#hornet-sportabout-187-8-3600-175-315-3440-1702-0-0-3-2\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Hornet Sportabout   18.7   8 360.0
+        175 3.15 3.440 17.02  0  0    3    2\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"valiant-181-6-2250-105-276-3460-2022-1-0-3-1\" href=\"#valiant-181-6-2250-105-276-3460-2022-1-0-3-1\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Valiant             18.1   6 225.0
+        105 2.76 3.460 20.22  1  0    3    1\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"duster-360-143-8-3600-245-321-3570-1584-0-0-3-4\" href=\"#duster-360-143-8-3600-245-321-3570-1584-0-0-3-4\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Duster 360          14.3   8 360.0
+        245 3.21 3.570 15.84  0  0    3    4\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"merc-240d-244-4-1467-62-369-3190-2000-1-0-4-2\" href=\"#merc-240d-244-4-1467-62-369-3190-2000-1-0-4-2\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Merc 240D           24.4   4 146.7  62
+        3.69 3.190 20.00  1  0    4    2\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"merc-230-228-4-1408-95-392-3150-2290-1-0-4-2\" href=\"#merc-230-228-4-1408-95-392-3150-2290-1-0-4-2\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Merc 230            22.8   4 140.8  95
+        3.92 3.150 22.90  1  0    4    2\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"merc-280-192-6-1676-123-392-3440-1830-1-0-4-4\" href=\"#merc-280-192-6-1676-123-392-3440-1830-1-0-4-4\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Merc 280            19.2   6 167.6
+        123 3.92 3.440 18.30  1  0    4    4\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"merc-280c-178-6-1676-123-392-3440-1890-1-0-4-4\" href=\"#merc-280c-178-6-1676-123-392-3440-1890-1-0-4-4\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Merc 280C           17.8   6 167.6
+        123 3.92 3.440 18.90  1  0    4    4\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"merc-450se-164-8-2758-180-307-4070-1740-0-0-3-3\" href=\"#merc-450se-164-8-2758-180-307-4070-1740-0-0-3-3\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Merc 450SE          16.4   8 275.8
+        180 3.07 4.070 17.40  0  0    3    3\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"merc-450sl-173-8-2758-180-307-3730-1760-0-0-3-3\" href=\"#merc-450sl-173-8-2758-180-307-3730-1760-0-0-3-3\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Merc 450SL          17.3   8 275.8
+        180 3.07 3.730 17.60  0  0    3    3\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"merc-450slc-152-8-2758-180-307-3780-1800-0-0-3-3\" href=\"#merc-450slc-152-8-2758-180-307-3780-1800-0-0-3-3\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Merc 450SLC         15.2   8 275.8
+        180 3.07 3.780 18.00  0  0    3    3\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"cadillac-fleetwood-104-8-4720-205-293-5250-1798-0-0-3-4\" href=\"#cadillac-fleetwood-104-8-4720-205-293-5250-1798-0-0-3-4\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Cadillac Fleetwood  10.4   8 472.0
+        205 2.93 5.250 17.98  0  0    3    4\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"lincoln-continental-104-8-4600-215-300-5424-1782-0-0-3-4\" href=\"#lincoln-continental-104-8-4600-215-300-5424-1782-0-0-3-4\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Lincoln Continental 10.4   8 460.0
+        215 3.00 5.424 17.82  0  0    3    4\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"chrysler-imperial-147-8-4400-230-323-5345-1742-0-0-3-4\" href=\"#chrysler-imperial-147-8-4400-230-323-5345-1742-0-0-3-4\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Chrysler Imperial   14.7   8 440.0
+        230 3.23 5.345 17.42  0  0    3    4\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"fiat-128-324-4-787-66-408-2200-1947-1-1-4-1\" href=\"#fiat-128-324-4-787-66-408-2200-1947-1-1-4-1\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Fiat 128            32.4   4  78.7  66
+        4.08 2.200 19.47  1  1    4    1\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"honda-civic-304-4-757-52-493-1615-1852-1-1-4-2\" href=\"#honda-civic-304-4-757-52-493-1615-1852-1-1-4-2\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Honda Civic         30.4   4  75.7  52
+        4.93 1.615 18.52  1  1    4    2\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"toyota-corolla-339-4-711-65-422-1835-1990-1-1-4-1\" href=\"#toyota-corolla-339-4-711-65-422-1835-1990-1-1-4-1\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Toyota Corolla      33.9   4  71.1  65
+        4.22 1.835 19.90  1  1    4    1\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"toyota-corona-215-4-1201-97-370-2465-2001-1-0-3-1\" href=\"#toyota-corona-215-4-1201-97-370-2465-2001-1-0-3-1\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Toyota Corona       21.5   4 120.1  97
+        3.70 2.465 20.01  1  0    3    1\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"dodge-challenger-155-8-3180-150-276-3520-1687-0-0-3-2\" href=\"#dodge-challenger-155-8-3180-150-276-3520-1687-0-0-3-2\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Dodge Challenger    15.5   8 318.0
+        150 2.76 3.520 16.87  0  0    3    2\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"amc-javelin-152-8-3040-150-315-3435-1730-0-0-3-2\" href=\"#amc-javelin-152-8-3040-150-315-3435-1730-0-0-3-2\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  AMC Javelin         15.2   8 304.0
+        150 3.15 3.435 17.30  0  0    3    2\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"camaro-z28-133-8-3500-245-373-3840-1541-0-0-3-4\" href=\"#camaro-z28-133-8-3500-245-373-3840-1541-0-0-3-4\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Camaro Z28          13.3   8 350.0
+        245 3.73 3.840 15.41  0  0    3    4\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"pontiac-firebird-192-8-4000-175-308-3845-1705-0-0-3-2\" href=\"#pontiac-firebird-192-8-4000-175-308-3845-1705-0-0-3-2\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Pontiac Firebird    19.2   8 400.0
+        175 3.08 3.845 17.05  0  0    3    2\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"fiat-x19-273-4-790-66-408-1935-1890-1-1-4-1\" href=\"#fiat-x19-273-4-790-66-408-1935-1890-1-1-4-1\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Fiat X1-9           27.3   4  79.0  66
+        4.08 1.935 18.90  1  1    4    1\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"porsche-9142-260-4-1203-91-443-2140-1670-0-1-5-2\" href=\"#porsche-9142-260-4-1203-91-443-2140-1670-0-1-5-2\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Porsche 914-2       26.0   4 120.3  91
+        4.43 2.140 16.70  0  1    5    2\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"lotus-europa-304-4-951-113-377-1513-1690-1-1-5-2\" href=\"#lotus-europa-304-4-951-113-377-1513-1690-1-1-5-2\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Lotus Europa        30.4   4  95.1
+        113 3.77 1.513 16.90  1  1    5    2\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"ford-pantera-l-158-8-3510-264-422-3170-1450-0-1-5-4\" href=\"#ford-pantera-l-158-8-3510-264-422-3170-1450-0-1-5-4\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Ford Pantera L      15.8   8 351.0
+        264 4.22 3.170 14.50  0  1    5    4\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"ferrari-dino-197-6-1450-175-362-2770-1550-0-1-5-6\" href=\"#ferrari-dino-197-6-1450-175-362-2770-1550-0-1-5-6\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Ferrari Dino        19.7   6 145.0
+        175 3.62 2.770 15.50  0  1    5    6\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"maserati-bora-150-8-3010-335-354-3570-1460-0-1-5-8\" href=\"#maserati-bora-150-8-3010-335-354-3570-1460-0-1-5-8\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Maserati Bora       15.0   8 301.0
+        335 3.54 3.570 14.60  0  1    5    8\n\u003c/h2\u003e\n\u003ch2\u003e\n  \u003ca
+        name=\"volvo-142e-214-4-1210-109-411-2780-1860-1-1-4-2\" href=\"#volvo-142e-214-4-1210-109-411-2780-1860-1-1-4-2\"
+        class=\"anchor\"\u003e\n  \u003c/a\u003e\n  Volvo 142E          21.4   4 121.0
+        109 4.11 2.780 18.60  1  1    4    2\n\u003c/h2\u003e\n\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003ch2\u003e\n\u003cbr\u003e\n  \u003ca
+        name=\"including-plots\" href=\"#including-plots\" class=\"anchor\"\u003e\u003cbr\u003e\n  \u003c/a\u003e\u003cbr\u003e\n  Including
+        Plots\u003cbr\u003e\n\u003c/h2\u003e\n\n\u003cp\u003eYou can also embed plots,
+        for example:\u003c/p\u003e\n\n\u003cp\u003e\u003ca href=\"/home/davidparr/Dev/dev.to.ol/tests/testthat/test_post_files/figure-gfm/pressure-1.png\"
+        class=\"article-body-image-wrapper\"\u003e\u003cimg src=\"/home/davidparr/Dev/dev.to.ol/tests/testthat/test_post_files/figure-gfm/pressure-1.png\"
         alt=\"\" loading=\"lazy\"\u003e\u003c/a\u003e\u0026lt;!-- --\u0026gt;\u003c/p\u003e\n\n\u003cp\u003eNote
         that the \u003ccode\u003eecho = FALSE\u003c/code\u003e parameter was added
         to the code chunk to\u003cbr\u003e\nprevent printing of the R code that generated
@@ -101,12 +215,43 @@ http_interactions:
         \u003chttp://rmarkdown.rstudio.com\u003e.\n\nWhen you click the **Knit** button
         a document will be generated that\nincludes both content as well as the output
         of any embedded R code\nchunks within the document. You can embed an R code
-        chunk like this:\n\n``` r\nmtcars %\u003e%\n  group_by(cyl) %\u003e%\n  summarise(mean
-        = mean(disp), n = n())\n```\n\n| cyl |     mean |  n |\n| --: | -------: |
-        -: |\n|   4 | 105.1364 | 11 |\n|   6 | 183.3143 |  7 |\n|   8 | 353.1000 |
-        14 |\n\n## Including Plots\n\nYou can also embed plots, for example:\n\n![](/Users/davidparr/Documents/dev.to.ol/tests/testthat/test_files/figure-gfm/pressure-1.png)\u003c!--
+        chunk like this:\n\n``` r\nmtcars\n```\n\n    ##                      mpg
+        cyl  disp  hp drat    wt  qsec vs am gear carb\n    ## Mazda RX4           21.0   6
+        160.0 110 3.90 2.620 16.46  0  1    4    4\n    ## Mazda RX4 Wag       21.0   6
+        160.0 110 3.90 2.875 17.02  0  1    4    4\n    ## Datsun 710          22.8   4
+        108.0  93 3.85 2.320 18.61  1  1    4    1\n    ## Hornet 4 Drive      21.4   6
+        258.0 110 3.08 3.215 19.44  1  0    3    1\n    ## Hornet Sportabout   18.7   8
+        360.0 175 3.15 3.440 17.02  0  0    3    2\n    ## Valiant             18.1   6
+        225.0 105 2.76 3.460 20.22  1  0    3    1\n    ## Duster 360          14.3   8
+        360.0 245 3.21 3.570 15.84  0  0    3    4\n    ## Merc 240D           24.4   4
+        146.7  62 3.69 3.190 20.00  1  0    4    2\n    ## Merc 230            22.8   4
+        140.8  95 3.92 3.150 22.90  1  0    4    2\n    ## Merc 280            19.2   6
+        167.6 123 3.92 3.440 18.30  1  0    4    4\n    ## Merc 280C           17.8   6
+        167.6 123 3.92 3.440 18.90  1  0    4    4\n    ## Merc 450SE          16.4   8
+        275.8 180 3.07 4.070 17.40  0  0    3    3\n    ## Merc 450SL          17.3   8
+        275.8 180 3.07 3.730 17.60  0  0    3    3\n    ## Merc 450SLC         15.2   8
+        275.8 180 3.07 3.780 18.00  0  0    3    3\n    ## Cadillac Fleetwood  10.4   8
+        472.0 205 2.93 5.250 17.98  0  0    3    4\n    ## Lincoln Continental 10.4   8
+        460.0 215 3.00 5.424 17.82  0  0    3    4\n    ## Chrysler Imperial   14.7   8
+        440.0 230 3.23 5.345 17.42  0  0    3    4\n    ## Fiat 128            32.4   4  78.7  66
+        4.08 2.200 19.47  1  1    4    1\n    ## Honda Civic         30.4   4  75.7  52
+        4.93 1.615 18.52  1  1    4    2\n    ## Toyota Corolla      33.9   4  71.1  65
+        4.22 1.835 19.90  1  1    4    1\n    ## Toyota Corona       21.5   4 120.1  97
+        3.70 2.465 20.01  1  0    3    1\n    ## Dodge Challenger    15.5   8 318.0
+        150 2.76 3.520 16.87  0  0    3    2\n    ## AMC Javelin         15.2   8
+        304.0 150 3.15 3.435 17.30  0  0    3    2\n    ## Camaro Z28          13.3   8
+        350.0 245 3.73 3.840 15.41  0  0    3    4\n    ## Pontiac Firebird    19.2   8
+        400.0 175 3.08 3.845 17.05  0  0    3    2\n    ## Fiat X1-9           27.3   4  79.0  66
+        4.08 1.935 18.90  1  1    4    1\n    ## Porsche 914-2       26.0   4 120.3  91
+        4.43 2.140 16.70  0  1    5    2\n    ## Lotus Europa        30.4   4  95.1
+        113 3.77 1.513 16.90  1  1    5    2\n    ## Ford Pantera L      15.8   8
+        351.0 264 4.22 3.170 14.50  0  1    5    4\n    ## Ferrari Dino        19.7   6
+        145.0 175 3.62 2.770 15.50  0  1    5    6\n    ## Maserati Bora       15.0   8
+        301.0 335 3.54 3.570 14.60  0  1    5    8\n    ## Volvo 142E          21.4   4
+        121.0 109 4.11 2.780 18.60  1  1    4    2\n\n## Including Plots\n\nYou can
+        also embed plots, for example:\n\n![](/home/davidparr/Dev/dev.to.ol/tests/testthat/test_post_files/figure-gfm/pressure-1.png)\u003c!--
         --\u003e\n\nNote that the `echo = FALSE` parameter was added to the code chunk
         to\nprevent printing of the R code that generated the plot.\n","user":{"name":"Dave
         Parr","username":"daveparr","twitter_username":"DaveParr","github_username":"DaveParr","website_url":"https://www.daveparr.info","profile_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--v1yPvsiE--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg","profile_image_90":"https://res.cloudinary.com/practicaldev/image/fetch/s--J8DJ9NrN--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg"}}'
-  recorded_at: 2020-06-25 15:24:46 GMT
-  recorded_with: vcr/0.5.4.91, webmockr/0.6.2
+  recorded_at: 2020-06-29 14:59:36 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
