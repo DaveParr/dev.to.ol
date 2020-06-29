@@ -1,6 +1,6 @@
 test_that("gets my user", {
   vcr::use_cassette("get_my_user", {
-    my_user <- dev.to.ol::get_my_user()
+    my_user <- dev.to.ol::get_my_user(tidy = FALSE)
   })
 
   expect_is(my_user, "response")
