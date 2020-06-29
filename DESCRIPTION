@@ -1,8 +1,8 @@
 Package: dev.to.ol
 Title: dev.to.ol
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: person('David', 'Parr', email = 'DavidRGParr@gmail.com', role = c('cre', 'aut'))
-Description: For working with the dev.to api and related markdown files
+Description: For publishing on dev.to
 License: MIT + file LICENSE
 LazyData: true
 URL: https://github.com/DaveParr/dev.to.ol
