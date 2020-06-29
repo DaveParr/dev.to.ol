@@ -1,16 +1,16 @@
 http_interactions:
 - request:
-    method: post
-    uri: https://dev.to/api/articles
+    method: put
+    uri: https://dev.to/api/articles/374200
     body:
       encoding: ''
-      string: '{"article":{"title":"test title","series":"test","published":false,"tags":["test","test1","test2"],"body_markdown":"##
-        R Markdown\n\nThis is an R Markdown document. Markdown is a simple formatting
-        syntax\nfor authoring HTML, PDF, and MS Word documents. For more details on\nusing
-        R Markdown see <http://rmarkdown.rstudio.com>.\n\nWhen you click the **Knit**
-        button a document will be generated that\nincludes both content as well as
-        the output of any embedded R code\nchunks within the document. You can embed
-        an R code chunk like this:\n\n``` r\nmtcars\n```\n\n    ##                      mpg
+      string: '{"article":{"title":"test title updated","series":"test","published":false,"tags":["test","test1","test2","updated1"],"body_markdown":"This
+        is updated text\n\n## R Markdown\n\nThis is an R Markdown document. Markdown
+        is a simple formatting syntax\nfor authoring HTML, PDF, and MS Word documents.
+        For more details on\nusing R Markdown see <http://rmarkdown.rstudio.com>.\n\nWhen
+        you click the **Knit** button a document will be generated that\nincludes
+        both content as well as the output of any embedded R code\nchunks within the
+        document. You can embed an R code chunk like this:\n\n``` r\nmtcars\n```\n\n    ##                      mpg
         cyl  disp  hp drat    wt  qsec vs am gear carb\n    ## Mazda RX4           21.0   6
         160.0 110 3.90 2.620 16.46  0  1    4    4\n    ## Mazda RX4 Wag       21.0   6
         160.0 110 3.90 2.875 17.02  0  1    4    4\n    ## Datsun 710          22.8   4
@@ -44,20 +44,20 @@ http_interactions:
         145.0 175 3.62 2.770 15.50  0  1    5    6\n    ## Maserati Bora       15.0   8
         301.0 335 3.54 3.570 14.60  0  1    5    8\n    ## Volvo 142E          21.4   4
         121.0 109 4.11 2.780 18.60  1  1    4    2\n\n## Including Plots\n\nYou can
-        also embed plots, for example:\n\n![](/home/davidparr/Dev/dev.to.ol/tests/testthat/test_post_files/figure-gfm/pressure-1.png)<!--
+        also embed plots, for example:\n\n![](/home/davidparr/Dev/dev.to.ol/tests/testthat/test_update_files/figure-gfm/pressure-1.png)<!--
         -->\n\nNote that the `echo = FALSE` parameter was added to the code chunk
         to\nprevent printing of the R code that generated the plot.\n","main_image":"https://images.unsplash.com/photo-1494026222377-872a605b54ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80","description":"abstract
-        text"}}'
+        text updated"}}'
     headers:
       Accept: application/json, text/xml, application/xml, */*
       Content-Type: application/json
       api-key: <<<my_api_key>>>
   response:
     status:
-      status_code: 201
+      status_code: 200
       category: Success
-      reason: Created
-      message: 'Success: (201) Created'
+      reason: OK
+      message: 'Success: (200) OK'
     headers:
       accept-ranges:
       - bytes
@@ -66,9 +66,8 @@ http_interactions:
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
       content-type: application/json; charset=utf-8
-      date: Mon, 29 Jun 2020 15:26:04 GMT
-      etag: W/"4a48bd749cfde4a476ccddb9bf6e826d"
-      location: https://dev.to/daveparr/test-title-3fid-temp-slug-6308311
+      date: Mon, 29 Jun 2020 15:28:31 GMT
+      etag: W/"9091249fe042ca51d048f0b5bf8d1f02"
       referrer-policy: strict-origin-when-cross-origin
       server: Cowboy
       vary: Accept-Encoding, Origin, X-Loggedin
@@ -82,22 +81,22 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: d1e68266-f49b-4f6f-8c02-a329805864bb
-      x-runtime: '1.008960'
-      x-served-by: cache-den19647-DEN, cache-lhr7373-LHR
-      x-timer: S1593444364.780040,VS0,VE1180
+      x-request-id: 86654181-0b22-4121-9501-69bcc97b8d54
+      x-runtime: '0.575230'
+      x-served-by: cache-den19640-DEN, cache-lhr7337-LHR
+      x-timer: S1593444511.572502,VS0,VE866
       x-xss-protection: 1; mode=block
     body:
       encoding: UTF-8
       file: no
-      string: '{"type_of":"article","id":374200,"title":"test title","description":"abstract
-        text","readable_publish_date":null,"slug":"test-title-3fid-temp-slug-6308311","path":"/daveparr/test-title-3fid-temp-slug-6308311","url":"https://dev.to/daveparr/test-title-3fid-temp-slug-6308311","comments_count":0,"public_reactions_count":0,"collection_id":7354,"published_timestamp":"","positive_reactions_count":0,"cover_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--9Z62r4-9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","social_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--D4h4hFuF--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","canonical_url":"https://dev.to/daveparr/test-title-3fid-temp-slug-6308311","created_at":"2020-06-29T15:26:04Z","edited_at":null,"crossposted_at":null,"published_at":null,"last_comment_at":"2017-01-01T05:00:00Z","tag_list":"test,
-        test1, test2","tags":["test","test1","test2"],"body_html":"\u003ch2\u003e\n  \u003ca
-        name=\"r-markdown\" href=\"#r-markdown\" class=\"anchor\"\u003e\n  \u003c/a\u003e\n  R
-        Markdown\n\u003c/h2\u003e\n\n\u003cp\u003eThis is an R Markdown document.
-        Markdown is a simple formatting syntax\u003cbr\u003e\nfor authoring HTML,
-        PDF, and MS Word documents. For more details on\u003cbr\u003e\nusing R Markdown
-        see \u003ca href=\"http://rmarkdown.rstudio.com\"\u003ehttp://rmarkdown.rstudio.com\u003c/a\u003e.\u003c/p\u003e\n\n\u003cp\u003eWhen
+      string: '{"type_of":"article","id":374200,"title":"test title updated","description":"abstract
+        text updated","readable_publish_date":null,"slug":"test-title-3fid-temp-slug-6308311","path":"/daveparr/test-title-3fid-temp-slug-6308311","url":"https://dev.to/daveparr/test-title-3fid-temp-slug-6308311","comments_count":0,"public_reactions_count":0,"collection_id":7354,"published_timestamp":"","positive_reactions_count":0,"cover_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--9Z62r4-9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","social_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--D4h4hFuF--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://images.unsplash.com/photo-1494026222377-872a605b54ba%3Fixlib%3Drb-1.2.1%26ixid%3DeyJhcHBfaWQiOjEyMDd9%26auto%3Dformat%26fit%3Dcrop%26w%3D1500%26q%3D80","canonical_url":"https://dev.to/daveparr/test-title-3fid-temp-slug-6308311","created_at":"2020-06-29T15:26:04Z","edited_at":null,"crossposted_at":null,"published_at":null,"last_comment_at":"2017-01-01T05:00:00Z","tag_list":"test,
+        test1, test2, updated1","tags":["test","test1","test2","updated1"],"body_html":"\u003cp\u003eThis
+        is updated text\u003c/p\u003e\n\n\u003ch2\u003e\n  \u003ca name=\"r-markdown\"
+        href=\"#r-markdown\" class=\"anchor\"\u003e\n  \u003c/a\u003e\n  R Markdown\n\u003c/h2\u003e\n\n\u003cp\u003eThis
+        is an R Markdown document. Markdown is a simple formatting syntax\u003cbr\u003e\nfor
+        authoring HTML, PDF, and MS Word documents. For more details on\u003cbr\u003e\nusing
+        R Markdown see \u003ca href=\"http://rmarkdown.rstudio.com\"\u003ehttp://rmarkdown.rstudio.com\u003c/a\u003e.\u003c/p\u003e\n\n\u003cp\u003eWhen
         you click the \u003cstrong\u003eKnit\u003c/strong\u003e button a document
         will be generated that\u003cbr\u003e\nincludes both content as well as the
         output of any embedded R code\u003cbr\u003e\nchunks within the document. You
@@ -204,18 +203,18 @@ http_interactions:
         109 4.11 2.780 18.60  1  1    4    2\n\u003c/h2\u003e\n\n\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003ch2\u003e\n\u003cbr\u003e\n  \u003ca
         name=\"including-plots\" href=\"#including-plots\" class=\"anchor\"\u003e\u003cbr\u003e\n  \u003c/a\u003e\u003cbr\u003e\n  Including
         Plots\u003cbr\u003e\n\u003c/h2\u003e\n\n\u003cp\u003eYou can also embed plots,
-        for example:\u003c/p\u003e\n\n\u003cp\u003e\u003ca href=\"/home/davidparr/Dev/dev.to.ol/tests/testthat/test_post_files/figure-gfm/pressure-1.png\"
-        class=\"article-body-image-wrapper\"\u003e\u003cimg src=\"/home/davidparr/Dev/dev.to.ol/tests/testthat/test_post_files/figure-gfm/pressure-1.png\"
+        for example:\u003c/p\u003e\n\n\u003cp\u003e\u003ca href=\"/home/davidparr/Dev/dev.to.ol/tests/testthat/test_update_files/figure-gfm/pressure-1.png\"
+        class=\"article-body-image-wrapper\"\u003e\u003cimg src=\"/home/davidparr/Dev/dev.to.ol/tests/testthat/test_update_files/figure-gfm/pressure-1.png\"
         alt=\"\" loading=\"lazy\"\u003e\u003c/a\u003e\u0026lt;!-- --\u0026gt;\u003c/p\u003e\n\n\u003cp\u003eNote
         that the \u003ccode\u003eecho = FALSE\u003c/code\u003e parameter was added
         to the code chunk to\u003cbr\u003e\nprevent printing of the R code that generated
-        the plot.\u003c/p\u003e\n\n","body_markdown":"## R Markdown\n\nThis is an
-        R Markdown document. Markdown is a simple formatting syntax\nfor authoring
-        HTML, PDF, and MS Word documents. For more details on\nusing R Markdown see
-        \u003chttp://rmarkdown.rstudio.com\u003e.\n\nWhen you click the **Knit** button
-        a document will be generated that\nincludes both content as well as the output
-        of any embedded R code\nchunks within the document. You can embed an R code
-        chunk like this:\n\n``` r\nmtcars\n```\n\n    ##                      mpg
+        the plot.\u003c/p\u003e\n\n","body_markdown":"This is updated text\n\n## R
+        Markdown\n\nThis is an R Markdown document. Markdown is a simple formatting
+        syntax\nfor authoring HTML, PDF, and MS Word documents. For more details on\nusing
+        R Markdown see \u003chttp://rmarkdown.rstudio.com\u003e.\n\nWhen you click
+        the **Knit** button a document will be generated that\nincludes both content
+        as well as the output of any embedded R code\nchunks within the document.
+        You can embed an R code chunk like this:\n\n``` r\nmtcars\n```\n\n    ##                      mpg
         cyl  disp  hp drat    wt  qsec vs am gear carb\n    ## Mazda RX4           21.0   6
         160.0 110 3.90 2.620 16.46  0  1    4    4\n    ## Mazda RX4 Wag       21.0   6
         160.0 110 3.90 2.875 17.02  0  1    4    4\n    ## Datsun 710          22.8   4
@@ -249,9 +248,9 @@ http_interactions:
         145.0 175 3.62 2.770 15.50  0  1    5    6\n    ## Maserati Bora       15.0   8
         301.0 335 3.54 3.570 14.60  0  1    5    8\n    ## Volvo 142E          21.4   4
         121.0 109 4.11 2.780 18.60  1  1    4    2\n\n## Including Plots\n\nYou can
-        also embed plots, for example:\n\n![](/home/davidparr/Dev/dev.to.ol/tests/testthat/test_post_files/figure-gfm/pressure-1.png)\u003c!--
+        also embed plots, for example:\n\n![](/home/davidparr/Dev/dev.to.ol/tests/testthat/test_update_files/figure-gfm/pressure-1.png)\u003c!--
         --\u003e\n\nNote that the `echo = FALSE` parameter was added to the code chunk
         to\nprevent printing of the R code that generated the plot.\n","user":{"name":"Dave
         Parr","username":"daveparr","twitter_username":"DaveParr","github_username":"DaveParr","website_url":"https://www.daveparr.info","profile_image":"https://res.cloudinary.com/practicaldev/image/fetch/s--v1yPvsiE--/c_fill,f_auto,fl_progressive,h_640,q_auto,w_640/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg","profile_image_90":"https://res.cloudinary.com/practicaldev/image/fetch/s--J8DJ9NrN--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/150692/22b3fd57-c859-4087-897b-f63d034fa359.jpeg"}}'
-  recorded_at: 2020-06-29 15:26:05 GMT
+  recorded_at: 2020-06-29 15:28:31 GMT
   recorded_with: vcr/0.5.4, webmockr/0.6.2
