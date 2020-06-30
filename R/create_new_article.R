@@ -27,7 +27,7 @@ create_new_article <-
            file = "") {
     boilerplate_frontmatter <-
       glue::glue(
-        '---\ntitle: "{title}"\ndescription: {description}\nseries: "{series}"\ntags: {tags}\noutput: github_document\n---'
+        '---\ntitle: "{title}"\ndescription: "{description}"\nseries: "{series}"\ntags: {tags}\noutput: github_document\n---'
       )
 
     cat(boilerplate_frontmatter, file = file)
