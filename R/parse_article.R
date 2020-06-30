@@ -36,8 +36,10 @@ parse_article <- function(file) {
                                      output_dir = getwd())
 
     file_string <- readr::read_file(output_path) %>%
-      stringr::str_remove(glue::glue("{title}\n================\n\n\n",
-                                     title = file_frontmatter$title))
+      stringr::str_remove(glue::glue(
+        "{title}\n================\n\n\n",
+        title = stringr::str_replace_all(file_frontmatter$title, "\\?", "\\\\?")
+      ))
 
     list(
       file_frontmatter = file_frontmatter,
