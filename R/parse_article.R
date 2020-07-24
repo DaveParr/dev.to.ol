@@ -1,8 +1,8 @@
-#' @title FUNCTION_TITLE
-#' @description FUNCTION_DESCRIPTION
-#' @param file PARAM_DESCRIPTION
-#' @return OUTPUT_DESCRIPTION
-#' @details DETAILS
+#' @title prepare an article for publication on dev.to
+#' @description Uses the YAML frontmatter of an .Rmd to create a raw markdown file suitable for publication.
+#' @param file .Rmd file
+#' @return list
+#' @details The list is describing the article metadata, markdown article output location and markdown article string. The title is removed from the article string and is present in the metadata.
 #' @examples
 #' \dontrun{
 #' if(interactive()){
