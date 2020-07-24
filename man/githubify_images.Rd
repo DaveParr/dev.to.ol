@@ -2,32 +2,32 @@
 % Please edit documentation in R/githubify_images.R
 \name{githubify_images}
 \alias{githubify_images}
-\title{FUNCTION_TITLE}
+\title{Replace local links to files with the expected github location.}
 \usage{
 githubify_images(
   article_string,
-  pattern = "/home/davidparr/Dev/dev.to-posts/",
-  user = "DaveParr",
-  repo = "dev.to-posts",
-  branch = "master"
+  local_image_path = Sys.getenv(x = "LOCAL_IMAGE_PATH"),
+  github_user = Sys.getenv(x = "GITHUB_USER"),
+  github_repo = Sys.getenv(x = "GITHUB_REPO"),
+  github_branch = Sys.getenv(x = "GITHUB_BRANCH")
 )
 }
 \arguments{
-\item{article_string}{PARAM_DESCRIPTION}
+\item{article_string}{The article as a string, e.g. from `readr::read_file`}
 
-\item{pattern}{PARAM_DESCRIPTION, Default: '/home/davidparr/Dev/dev.to-posts/'}
+\item{local_image_path}{The local path to the images, Default: Sys.getenv(x = "LOCAL_IMAGE_PATH")}
 
-\item{user}{PARAM_DESCRIPTION, Default: 'daveparr'}
+\item{github_user}{Your github username, Default: Sys.getenv(x = "GITHUB_USER")}
 
-\item{repo}{PARAM_DESCRIPTION, Default: 'dev.to-posts'}
+\item{github_repo}{The github repo hosting the article and image, Default: Sys.getenv(x = "GITHUB_REPO")}
 
-\item{branch}{PARAM_DESCRIPTION, Default: 'master'}
+\item{github_branch}{The branch on the github repo to publish from, Default: Sys.getenv(x = "GITHUB_BRANCH")}
 }
 \value{
-OUTPUT_DESCRIPTION
+The article string with the image paths changed from a local path to an expected location on github
 }
 \description{
-FUNCTION_DESCRIPTION
+The function will look for capitalised environmental variables of the same name as the argument set in an .Renviron
 }
 \details{
 DETAILS

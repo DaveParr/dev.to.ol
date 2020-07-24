@@ -2,21 +2,21 @@
 % Please edit documentation in R/parse_article.R
 \name{parse_article}
 \alias{parse_article}
-\title{FUNCTION_TITLE}
+\title{prepare an article for publication on dev.to}
 \usage{
 parse_article(file)
 }
 \arguments{
-\item{file}{PARAM_DESCRIPTION}
+\item{file}{.Rmd file}
 }
 \value{
-OUTPUT_DESCRIPTION
+list
 }
 \description{
-FUNCTION_DESCRIPTION
+Uses the YAML frontmatter of an .Rmd to create a raw markdown file suitable for publication.
 }
 \details{
-DETAILS
+The list is describing the article metadata, markdown article output location and markdown article string. The title is removed from the article string and is present in the metadata.
 }
 \examples{
 \dontrun{
