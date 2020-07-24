@@ -39,7 +39,8 @@ parse_article <- function(file) {
       stringr::str_remove(glue::glue(
         "{title}\n================\n\n\n",
         title = stringr::str_replace_all(file_frontmatter$title, "\\?", "\\\\?")
-      ))
+      )) %>%
+      githubify_images()
 
     list(
       file_frontmatter = file_frontmatter,
