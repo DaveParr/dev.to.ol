@@ -21,3 +21,5 @@ test_that("parsing articles with awkward titles", {
   expect_equal(article$file_frontmatter$title, "test title.")
   expect_equal(article$file_string, "This is an original post\n")
 })
+
+# TODO fix title issue that still comes up
