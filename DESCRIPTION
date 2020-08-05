@@ -17,7 +17,8 @@ Imports:
     tidyr,
     attempt,
     curl,
-    httr
+    httr,
+    readr
 Suggests: 
     testthat (>= 2.1.0),
     vcr
