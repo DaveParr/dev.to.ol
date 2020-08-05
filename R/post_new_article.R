@@ -40,46 +40,32 @@
 post_new_article <-
   function(file,
            key = NA) {
-
     check_internet()
 
-    check_file <- is_postable_Rmd(file)
+    article <- parse_article(file = file)
 
-    if (check_file) {
-      file_frontmatter <- rmarkdown::yaml_front_matter(file)
+    response <- httr::POST(
+      url = "https://dev.to/api/articles",
+      httr::add_headers("api-key" = api_key(key = key)),
+      user_agent,
+      body = list(
+        article = list(
+          title = article$file_frontmatter$title,
+          series = article$file_frontmatter$series,
+          published = article$file_frontmatter$published,
+          tags = article$file_frontmatter$tags,
+          body_markdown = article$file_string,
+          main_image = article$file_frontmatter$main_image,
+          description = article$file_frontmatter$description
+        )
+      ),
+      encode = 'json'
+    )
 
-      file_frontmatter$tags <- purrr::map(file_frontmatter$tags, stringr::str_remove_all, " ")
+    check_json(response)
 
-      output_path <- rmarkdown::render(file,
-                                       output_format = 'github_document',
-                                       output_dir = getwd())
+    check_status(response, operation = "createArticle", expected = 201)
 
-      file_string <- readr::read_file(output_path) %>%
-        stringr::str_remove(glue::glue("{title}\n================\n\n\n",
-                                       title = file_frontmatter$title))
+    response
 
-      response <- httr::POST(
-        url = "https://dev.to/api/articles",
-        httr::add_headers("api-key" = api_key(key = key)),
-        user_agent,
-        body = list(
-          article = list(
-            title = file_frontmatter$title,
-            series = file_frontmatter$series,
-            published = file_frontmatter$published,
-            tags = file_frontmatter$tags,
-            body_markdown = file_string,
-            main_image = file_frontmatter$main_image,
-            description = file_frontmatter$description
-          )
-        ),
-        encode = 'json'
-      )
-
-      check_json(response)
-
-      check_status(response, operation = "createArticle", expected = 201 )
-
-      response
-    }
   }
