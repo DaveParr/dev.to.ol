@@ -16,7 +16,8 @@ Imports:
     glue,
     tidyr,
     attempt,
-    curl
+    curl,
+    httr
 Suggests: 
     testthat (>= 2.1.0),
     vcr
