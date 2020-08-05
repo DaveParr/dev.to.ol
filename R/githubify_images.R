@@ -5,14 +5,9 @@
 #' @param github_user Your github username, Default: Sys.getenv(x = "GITHUB_USER")
 #' @param github_repo The github repo hosting the article and image, Default: Sys.getenv(x = "GITHUB_REPO")
 #' @param github_branch The branch on the github repo to publish from, Default: Sys.getenv(x = "GITHUB_BRANCH")
-#' @return The article string with the image paths changed from a local path to an expected location on github
-#' @details DETAILS
-#' @examples
-#' \dontrun{
-#' if(interactive()){
-#'  #EXAMPLE1
-#'  }
-#' }
+#' @return The article string with the image paths changed from a local path to an expected location on GitHub.
+#' @details At no point does dev.to.ol check that the image is at the expected path, so remember to push your work,
+#' and double check the paths are set correctly. \code{\link[dev.to.ol]{setup_environ}} can help with this.
 #' @seealso
 #'  \code{\link[readr]{read_file}}
 #'  \code{\link[glue]{glue}}

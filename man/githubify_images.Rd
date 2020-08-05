@@ -24,20 +24,14 @@ githubify_images(
 \item{github_branch}{The branch on the github repo to publish from, Default: Sys.getenv(x = "GITHUB_BRANCH")}
 }
 \value{
-The article string with the image paths changed from a local path to an expected location on github
+The article string with the image paths changed from a local path to an expected location on GitHub.
 }
 \description{
 The function will look for capitalised environmental variables of the same name as the argument set in an .Renviron
 }
 \details{
-DETAILS
-}
-\examples{
-\dontrun{
-if(interactive()){
- #EXAMPLE1
- }
-}
+At no point does dev.to.ol check that the image is at the expected path, so remember to push your work,
+and double check the paths are set correctly. \code{\link[dev.to.ol]{setup_environ}} can help with this.
 }
 \seealso{
 \code{\link[readr]{read_file}}
